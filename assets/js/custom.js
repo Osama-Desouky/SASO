@@ -36,4 +36,7 @@ $(document).ready(function () {
       clearInterval(interval);
     }, 300);
   });
+  $("#fav-toggle").on("click",function(){
+    $("#fav-list").slideToggle();
+  })
 });
