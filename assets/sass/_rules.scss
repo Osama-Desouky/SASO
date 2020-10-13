@@ -1,0 +1,22 @@
+
+html[dir="rtl"] body {
+  text-align: right;
+  direction: rtl;
+  font-family: $font-ar;
+}
+body {
+  color: $color-default;
+  background-color: $body-bg;
+  background-image: url($img-path+'bg-pattern.svg'), url($img-path+'bg-pattern.svg');
+  background-repeat: no-repeat ,  no-repeat;
+  background-position: 150% 200%  , -50% -800% ;
+}
+*,
+*:focus,
+*:active,
+button:focus {
+  outline: none;
+}
+a:hover {
+  text-decoration: none;
+}

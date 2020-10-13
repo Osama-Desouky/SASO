@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="53.044" height="53.044" viewBox="0 0 53.044 53.044">
+  <g id="rel-tech-icon" transform="translate(-341.359 25.64)">
+    <line id="Line_167" data-name="Line 167" y1="13.959" transform="translate(359.985 8.778) rotate(45)" fill="none" stroke="#9a6a3c" stroke-width="4"/>
+    <line id="Line_168" data-name="Line 168" y2="13.959" transform="translate(385.649 -16.885) rotate(45)" fill="none" stroke="#9a6a3c" stroke-width="4"/>
+    <line id="Line_169" data-name="Line 169" x2="13.959" transform="translate(350.115 -16.885) rotate(45)" fill="none" stroke="#9a6a3c" stroke-width="4"/>
+    <line id="Line_170" data-name="Line 170" x1="13.959" transform="translate(375.778 8.778) rotate(45)" fill="none" stroke="#9a6a3c" stroke-width="4"/>
+    <g id="Ellipse_76" data-name="Ellipse 76" transform="translate(355.318 -11.682)" fill="none" stroke="#9a6a3c" stroke-width="3">
+      <circle cx="12.563" cy="12.563" r="12.563" stroke="none"/>
+      <circle cx="12.563" cy="12.563" r="11.063" fill="none"/>
+    </g>
+    <g id="Ellipse_75" data-name="Ellipse 75" transform="translate(341.359 -25.64)" fill="none" stroke="#9a6a3c" stroke-width="3">
+      <circle cx="26.522" cy="26.522" r="26.522" stroke="none"/>
+      <circle cx="26.522" cy="26.522" r="25.022" fill="none"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="phone-icon" transform="translate(-1754 -440)">
+    <rect id="icon-base" width="20" height="20" transform="translate(1754 440)" fill="none"/>
+    <path id="Path_6104" data-name="Path 6104" d="M-4.346-16.72l-3.3-.761a.766.766,0,0,0-.872.441l-1.523,3.553a.759.759,0,0,0,.219.888L-7.9-11.025A11.758,11.758,0,0,1-13.522-5.4L-15.1-7.325a.761.761,0,0,0-.888-.219l-3.553,1.523a.771.771,0,0,0-.444.876l.761,3.3a.761.761,0,0,0,.742.59A14.719,14.719,0,0,0-3.756-15.977.761.761,0,0,0-4.346-16.72Z" transform="translate(1775.5 459)" fill="none" stroke="#fff" stroke-width="1.5"/>
+  </g>
+</svg>
