@@ -38,5 +38,7 @@ $(document).ready(function () {
   });
   $("#fav-toggle").on("click",function(){
     $("#fav-list").slideToggle();
+    $("#fav-toggle i").toggleClass("fa-chevron-up");
+    $("#fav-toggle i").toggleClass("fa-chevron-down");
   })
 });
