@@ -9,7 +9,7 @@ body {
   background-color: $body-bg;
   background-image: url($img-path+'bg-pattern.svg'), url($img-path+'bg-pattern.svg');
   background-repeat: no-repeat ,  no-repeat;
-  background-position: 150% 200%  , -50% -800% ;
+  background-position: 150% -200px , -50% 800px;
 }
 *,
 *:focus,
