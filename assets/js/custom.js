@@ -40,5 +40,11 @@ $(document).ready(function () {
     $("#fav-list").slideToggle();
     $("#fav-toggle i").toggleClass("fa-chevron-up");
     $("#fav-toggle i").toggleClass("fa-chevron-down");
-  })
+  });
+  $("#s-btn").click(function () {
+    $(".search-box").slideToggle(300);
+  });
+  $(".close-search-btn,.search-submit-btn").click(function () {
+    $(".search-box").slideUp(300);
+  });
 });

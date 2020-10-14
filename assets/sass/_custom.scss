@@ -63,6 +63,7 @@
   }
   .search-btn {
     float: $left;
+    position: relative;
     #s-btn {
       color: $gray-888;
       font-size: 20px;
@@ -990,4 +991,36 @@ footer {
 .stop-scrolling {
   height: 100%;
   overflow: hidden;
+}
+.search-box {
+  position: absolute;
+  left: 0;
+  top: 30px;
+  width: 400px;
+  padding-left: 50px;
+  background-color: #fff;
+  display: none;
+  z-index: 10;
+  border-radius: 7px;
+}
+.search-box .form-control {
+  border: none;
+  font-size: 16px;
+  height: 45px;
+  padding: 11px 11px 9px;
+}
+a.search-submit-btn {
+  position: absolute;
+  left: 27px;
+  color: #1D4D8B;
+  padding: 5px !important;
+  top: 5px;
+}
+a.close-search-btn {
+  position: absolute;
+  left: 3px;
+  color: #777 !important;
+  font-size: 20px;
+  padding: 5px !important;
+  top: 3px;
 }
