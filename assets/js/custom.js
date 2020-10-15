@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('.custom-select').select2();
+  $(".custom-select").select2();
   $('[data-toggle="tooltip"]').tooltip();
   var mainSwiper = new Swiper(".main-slider", {
     observer: true, // Optional parameters
@@ -36,7 +36,7 @@ $(document).ready(function () {
       clearInterval(interval);
     }, 300);
   });
-  $("#fav-toggle").on("click",function(){
+  $("#fav-toggle").on("click", function () {
     $("#fav-list").slideToggle();
     $("#fav-toggle i").toggleClass("fa-chevron-up");
     $("#fav-toggle i").toggleClass("fa-chevron-down");
@@ -46,5 +46,14 @@ $(document).ready(function () {
   });
   $(".close-search-btn,.search-submit-btn").click(function () {
     $(".search-box").slideUp(300);
+  });
+  // intializing datepicker
+  $(".date-inline").datepicker({
+    format: "mm/dd/yyyy",
+    autoclose: true,
+  });
+  // open event for date picker
+  $(".date-toggle").click(function () {
+    $(this).siblings(".date-inline").datepicker("show");
   });
 });

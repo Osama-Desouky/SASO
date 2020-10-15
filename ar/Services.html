@@ -152,11 +152,12 @@
     </div>
 
   </nav>
+  <!-- end NavBar -->
   <section class="content">
     <div class="container">
 
       <div class="row">
-        <div class="col fav-wrapper">
+        <div class="col-12 col-md fav-wrapper">
           <div class="user-info-card">
             <div class="img-box">
               <img src="../assets/images/profile-img.png" alt="" srcset="">
@@ -249,7 +250,7 @@
             </button>
           </div>
         </div>
-        <div class="col" id="fav-other-side">
+        <div class="col-12 col-md" id="fav-other-side">
           <!-- start here -->
           <section class="inner-page-header">
             <nav aria-label="breadcrumb">
@@ -262,8 +263,113 @@
             </nav>
             <h1>الخدمات الإلكترونية</h1>
           </section>
-          
           <!-- end here  -->
+          <div class="tabs">
+            <div class="row">
+              <div class="col-12 col-lg-6 col-xl-9">
+                <nav>
+                  <div class="nav nav-pills" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="personal-services-tab" data-toggle="tab" href="#personal-services" role="tab" aria-controls="personal-services" aria-selected="true">الخدمات الشخصية</a>
+                    <a class="nav-item nav-link" id="official-tasks-tab" data-toggle="tab" href="#official-tasks" role="tab" aria-controls="official-tasks" aria-selected="false">الاستئذانات والمهام الرسمية</a>
+                    <a class="nav-item nav-link" id="logistic-tasks-tab" data-toggle="tab" href="#logistic-tasks" role="tab" aria-controls="logistic-tasks" aria-selected="false">الخدمات اللوجستية</a>
+                    <a class="nav-item nav-link" id="review-services-tab" data-toggle="tab" href="#review-services" role="tab" aria-controls="review-services" aria-selected="false">خدمات الاستعلام</a>
+                    <a class="nav-item nav-link" id="other-services-tab" data-toggle="tab" href="#other-services" role="tab" aria-controls="other-services" aria-selected="false">خدمات أخرى</a>
+                  </div>
+                </nav>
+              </div>
+              <div class="col-12 col-lg-6 col-xl-3">
+                <form>
+                  <div class="form-group inner-search-box">
+                    <input type="text" name="search" id="inner-search" placeholder="البحث في الخدمات" class="form-control">
+                    <button type="submit">
+                      <img src="../assets/images/search-inner-icon.svg">
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="personal-services" role="tabpanel" aria-labelledby="personal-services-tab">
+                <div class="row">
+                  <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="service-box">
+                      <img src="../assets/images/serv-plane-icon.svg" alt="" srcset="">
+                      <h4>طلب اجازة</h4>
+                      <button type="button">إبدأ الخدمة</button>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="service-box">
+                      <img src="../assets/images/serv-desk-icon.svg" alt="" srcset="">
+                      <h4>طلب خارج الدوام</h4>
+                      <button type="button">إبدأ الخدمة</button>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="service-box">
+                      <img src="../assets/images/serv-headphone-icon.svg" alt="" srcset="">
+                      <h4>طلب خدمة انتداب</h4>
+                      <button type="button">إبدأ الخدمة</button>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="service-box">
+                      <img src="../assets/images/serv-calendar-icon.svg" alt="" srcset="">
+                      <h4>كشف الحضور والانصراف</h4>
+                      <button type="button">إبدأ الخدمة</button>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="service-box">
+                      <img src="../assets/images/serv-meeting-icon.svg" alt="" srcset="">
+                      <h4>طلب حجز قاعة</h4>
+                      <button type="button">إبدأ الخدمة</button>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="service-box">
+                      <img src="../assets/images/serv-tasks-icon.svg" alt="" srcset="">
+                      <h4>طلب بيان ساعات خارج الدوام</h4>
+                      <button type="button">إبدأ الخدمة</button>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="service-box">
+                      <img src="../assets/images/serv-car-icon.svg" alt="" srcset="">
+                      <h4>خدمة صيانة سيارة</h4>
+                      <button type="button">إبدأ الخدمة</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="official-tasks" role="tabpanel" aria-labelledby="official-tasks-tab"></div>
+              <div class="tab-pane fade" id="logistic-tasks" role="tabpanel" aria-labelledby="logistic-tasks-tab"></div>
+              <div class="tab-pane fade" id="review-services" role="tabpanel" aria-labelledby="review-services-tab"></div>
+              <div class="tab-pane fade" id="other-services" role="tabpanel" aria-labelledby="other-services-tab"></div>
+            </div>
+          </div>
+          <nav aria-label="Page navigation" class="inner-pagination">
+            <ul class="pagination justify-content-center">
+              <li class="page-item arrow">
+                <a class="page-link disabled" href="#" aria-label="Previous">
+                  <span aria-hidden="true"><img src="../assets/images/right-arrow.svg" alt="" srcset=""></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+              <li class="page-item arrow">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true"><img src="../assets/images/left-arrow.svg" alt="" srcset=""></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </div>
@@ -272,7 +378,7 @@
   <footer>
     <div class="container">
       <div class="copy float-right">
-        جميع الحقوق محفوظة للهيئة السعودية للمواصفات والمقاييس والجودة  © 2020
+        جميع الحقوق محفوظة للهيئة السعودية للمواصفات والمقاييس والجودة © 2020
       </div>
       <div class="logos float-left">
         <img src="../assets/images/saso-logo.svg" alt="">
