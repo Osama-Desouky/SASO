@@ -143,10 +143,11 @@
 }
 
 .user-info-wrapper {
-  max-width: max-content;
+  width: 375px;
+  max-width: 375px;
 }
 .user-info-card {
-  width: 375px;
+  width: 100%;
   background-color: #02b1d6;
   color: #fff;
   padding: 12px;
@@ -256,7 +257,7 @@
   }
 }
 #user-info-other-side {
-  max-width: calc(100% - 405px);
+  max-width: calc(100% - 375px);
   transition: 0.3s;
   &.collapsed {
     max-width: calc(100% - 135px);
@@ -266,7 +267,7 @@
   }
 }
 #fav-other-side {
-  max-width: calc(100% - 405px);
+  max-width: calc(100% - 375px);
   transition: 0.3s;
 }
 .dash-cards {
@@ -481,9 +482,10 @@
   }
 }
 .fav-wrapper {
-  max-width: max-content;
+  width: 375px;
+  max-width: 375px;
   .fav-card {
-    width: 375px;
+    width: 100%;
     padding: 12px 0;
     position: relative;
     border-radius: 39px;
@@ -925,9 +927,12 @@
   border: 2px solid #d9d9d9;
   transition: 0.3s;
   margin-bottom: 30px;
+.img-box{
+  overflow: hidden;
   img {
     margin-bottom: 35px;
   }
+}
   h4 {
     font-size: 15px;
     transition: 0.3s;
@@ -1544,13 +1549,13 @@ cite.date {
   font-size: 16px;
   color: $color-default;
   padding: 5px 10px;
-  i{
+  i {
     margin-left: 6px;
   }
   border-radius: 25px;
   box-shadow: 0 0px 15px rgba($color: #000000, $alpha: 0.08);
   transition: 0.3s;
-  &:hover{
+  &:hover {
     box-shadow: 0 0px 15px rgba($color: #000000, $alpha: 0.15);
   }
 }

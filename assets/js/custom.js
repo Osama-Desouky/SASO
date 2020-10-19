@@ -48,10 +48,13 @@ $(document).ready(function () {
     $(".search-box").slideUp(300);
   });
   // intializing datepicker
-  $(".date-inline").datepicker({
-    format: "mm/dd/yyyy",
-    autoclose: true,
-  });
+  if($(".date-inline").length){
+    $(".date-inline").datepicker({
+      format: "mm/dd/yyyy",
+      autoclose: true,
+    });
+  }
+
   // open event for date picker
   $(".date-toggle").click(function () {
     $(this).siblings(".date-inline").datepicker("show");

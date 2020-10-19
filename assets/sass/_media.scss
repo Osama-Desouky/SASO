@@ -20,7 +20,13 @@
     }
   }
 }
-@media (min-width: 1200px) and (max-width: 1399.98px) {
+@media (max-width: 1599.98px) {
+  .top-bar .time-weather-list li {
+    padding: 0 10px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 1399.98px) {
   // .container{
   //   max-width: 1320px;
   // }
@@ -28,6 +34,27 @@
     .nav-item {
       margin-right: 15px;
     }
+  }
+  .fav-wrapper,
+  .user-info-wrapper {
+    width: 300px;
+    max-width: 300px;
+  }
+  #user-info-other-side,
+  #fav-other-side {
+    max-width: calc(100% - 300px);
+  }
+  .top-bar .user-info {
+    margin-left: 15px;
+  }
+  .top-bar .link {
+    margin-left: 15px;
+  }
+  .top-bar .lang {
+    padding: 0 15px;
+  }
+  .top-bar .lang {
+    line-height: 25px;
   }
 }
 
@@ -38,30 +65,92 @@
       margin-right: 15px;
     }
   }
+  .top-bar {
+    *:not(i) {
+      font-size: 12px !important;
+    }
+     .search-btn #s-btn img {
+      width: 15px;
+    }
+    .notification #notification-btn {
+      font-size: 18px !important;
+      .count {
+        font-size: 9px !important;
+        width: 14px;
+        height: 14px;
+        line-height: 14px;
+      }
+    }
+    .link img {
+      margin-left: 5px;
+      width: 15px;
+  }
+  }
+  .top-bar .time-weather-list li i{
+    font-size: 14px;
+  }
+   .top-bar .time-weather-list li img{
+     width: 18px;
+   }
+   .top-bar .user-info img{
+    width: 18px;
+   }
+   .top-bar .user-info {
+    margin-left: 10px;
+  }
+  .top-bar .link {
+    margin-left: 10px;
+  }
+  .top-bar .lang {
+    padding: 0 10px;
+    line-height: 20px;
+  }
+  .top-bar .notification{
+    margin-top: -2px;
+  }
 }
 
 // Medium devices (tablets, less than 992px)
 @media (max-width: 991.98px) {
+  .top-bar .time-weather-list{
+    padding-top: 3px;
+  }
+  .top-bar .lang,.top-bar .notification,.top-bar .link{
+    float: right !important;
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  .top-bar .link{
+    margin-left: 0;
+
+  }
 }
 
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
+  .top-bar{
+    display: none;
+  }
   #user-info-other-side,
   #fav-other-side,
   .fav-wrapper {
+    width: 100% !important;
     max-width: 100% !important;
   }
   .user-info-wrapper {
     max-width: 100% !important;
+    width: 100%;
     margin-bottom: 30px !important;
   }
   .user-info-card,
   .fav-card {
     width: 100% !important;
+    max-width: 100% !important;
   }
   footer {
     text-align: center;
-    .copy,.logos{
+    .copy,
+    .logos {
       float: none !important;
     }
   }
