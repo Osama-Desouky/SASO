@@ -2,7 +2,6 @@ $(document).ready(function () {
   $(".custom-select").select2();
   $('[data-toggle="tooltip"]').tooltip();
   var mainSwiper = new Swiper(".main-slider", {
-    observer: true, // Optional parameters
     loop: true,
 
     // If we need pagination
@@ -29,10 +28,10 @@ $(document).ready(function () {
       $(this).attr("data-original-title", "تصغير القائمة");
     }
     $(this).blur();
-    var interval = setInterval(() => {
+    var interval = setInterval(function () {
       mainSwiper.update();
     }, 5);
-    setTimeout(() => {
+    setTimeout(function () {
       clearInterval(interval);
     }, 300);
   });
