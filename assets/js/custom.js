@@ -59,4 +59,12 @@ $(document).ready(function () {
   $(".date-toggle").click(function () {
     $(this).siblings(".date-inline").datepicker("show");
   });
+  $("#showResult").on('click',function(){
+    $("#voteResult").css({'display':'block'});
+    $("#votePoll").css({'display':'none'});
+  });
+  $("#pollBack").on('click',function(){
+    $("#voteResult").css({'display':'none'});
+    $("#votePoll").css({'display':'block'});
+  })
 });
