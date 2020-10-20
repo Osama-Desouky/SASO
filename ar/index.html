@@ -579,7 +579,7 @@
               <div class="inner-title ">
                 شاركنا الرأي
               </div>
-              <div class="default-card poll">
+              <div class="default-card poll" id="votePoll">
                 <h5>ما هي الخدمة التي تحتاجها وتود ان تكون متواجدة في البوابة الداخلية للهيئة؟</h5>
                 <form>
                   <div class="custom-control custom-radio">
@@ -609,73 +609,112 @@
                   <div class="poll-btns">
                     <button type="submit" class="btn btn-primary vote">تصويت</button>
 
-                    <button type="button" class="btn btn-primary show-results">
+                    <button type="button" class="btn btn-primary show-results" id="showResult">
                       عرض النتائج
                       <i class="far fa-arrow-alt-circle-left"></i>
                     </button>
                   </div>
                 </form>
               </div>
+              <div class="default-card poll" style="display: none;" id="voteResult">
+                <h5>ما رأيك في الموقع الجديد</h5>
+
+                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="singlePollResult">
+                          <div class="poll-percent">ممتاز 92% (7978)</div>
+                          <div class="resultbarbase"
+                            style="margin-top:5px; height:16px;width:100%;background-color:#EDEDED;border:0 none">
+                            <div style="float:right;  height:16px;width:92%;background-color:#0a6562;border:0 none">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="singlePollResult">
+                          <div class="poll-percent">جيد 2% (260)</div>
+                          <div class="resultbarbase"
+                            style="margin-top:5px; height:16px;width:100%;background-color:#EDEDED;border:0 none">
+                            <div style="float:right;  height:16px;width:2%;background-color:#7ce8e4;border:0 none">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="singlePollResult">
+                          <div class="poll-percent">مقبول 4% (432)</div>
+                          <div class="resultbarbase"
+                            style="margin-top:5px; height:16px;width:100%;background-color:#EDEDED;border:0 none">
+                            <div style="float:right;  height:16px;width:4%;background-color:#00afa9;border:0 none">
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="poll-btns">
+                  <button type="submit" class="btn btn-primary vote" id="pollBack">عوده</button>
+                </div>
+
+              </div>
             </div>
           </div>
           <div class="row mt-40">
-       
-           <div class="col-12">
-            <div class="inner-title">
-              روابط ذات صله
+
+            <div class="col-12">
+              <div class="inner-title">
+                روابط ذات صله
+              </div>
+              <div class="row mb-70">
+                <div class="col-12 col-lg-6 col-xl-3">
+                  <div class="relative-card">
+                    <div class="img-box">
+                      <img src="../assets/images/rel-support-icon.svg" alt="">
+                    </div>
+                    <h4>نظام خدمة العملاء</h4>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                  <div class="relative-card">
+                    <div class="img-box">
+                      <img src="../assets/images/rel-mail-icon.svg" alt="">
+                    </div>
+
+                    <h4>نظام المراسلات الادارية</h4>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                  <div class="relative-card">
+                    <div class="img-box">
+                      <img src="../assets/images/rel-tech-icon.svg" alt="">
+                    </div>
+
+                    <h4>نظام الدعم الفني</h4>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                  <div class="relative-card">
+                    <div class="img-box">
+                      <img src="../assets/images/rel-technology-icon.svg" alt="">
+                    </div>
+
+                    <h4>دليل الخدمات التقنية</h4>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </div>
+                </div>
+              </div>
             </div>
-             <div class="row mb-70">
-              <div class="col-12 col-lg-6 col-xl-3">
-                <div class="relative-card">
-                  <div class="img-box">
-                    <img src="../assets/images/rel-support-icon.svg" alt="">
-                  </div>
-                  <h4>نظام خدمة العملاء</h4>
-                  <a href="javascript:;" class="stretched-link"></a>
-                </div>
-              </div>
-              <div class="col-12 col-lg-6 col-xl-3">
-                <div class="relative-card">
-                  <div class="img-box">
-                    <img src="../assets/images/rel-mail-icon.svg" alt="">
-                  </div>
-                  
-                  <h4>نظام المراسلات الادارية</h4>
-                  <a href="javascript:;" class="stretched-link"></a>
-                </div>
-              </div>
-              <div class="col-12 col-lg-6 col-xl-3">
-                <div class="relative-card">
-                  <div class="img-box">
-                    <img src="../assets/images/rel-tech-icon.svg" alt="">
-                  </div>
-                  
-                  <h4>نظام الدعم الفني</h4>
-                  <a href="javascript:;" class="stretched-link"></a>
-                </div>
-              </div>
-              <div class="col-12 col-lg-6 col-xl-3">
-                <div class="relative-card">
-                  <div class="img-box">
-                    <img src="../assets/images/rel-technology-icon.svg" alt="">
-                  </div>
-                  
-                  <h4>دليل الخدمات التقنية</h4>
-                  <a href="javascript:;" class="stretched-link"></a>
-                </div>
-              </div>
-             </div>
-           </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   </section>
   <footer>
     <div class="container">
       <div class="copy float-right">
-        جميع الحقوق محفوظة للهيئة السعودية للمواصفات والمقاييس والجودة  © 2020
+        جميع الحقوق محفوظة للهيئة السعودية للمواصفات والمقاييس والجودة © 2020
       </div>
       <div class="logos float-left">
         <img src="../assets/images/saso-logo.svg" alt="">
