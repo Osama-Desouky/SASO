@@ -767,6 +767,7 @@
   padding: 75px 40px 36px;
   .select2 {
     margin-bottom: 32px;
+    width:100%!important;
   }
   .form-group {
     margin-bottom: 110px;
@@ -916,6 +917,24 @@
     }
   }
 }
+// poll results
+.singlePollResult{
+  margin-bottom: 15px;
+    clear: both;
+    .resultbarbase{
+      margin-top: 5px;
+    height: 5px!important;
+    width: 100%;
+    background-color: #EDEDED;
+    border: 0 none;
+    >div{
+      height: 100%!important;
+    }
+    }
+    .poll-percent {
+      font-size: 15px;
+  }
+}
 .relative-card {
   display: flex;
   flex-direction: column;
@@ -1000,11 +1019,12 @@ footer {
   font-size: 16px;
   height: 45px;
   padding: 11px 11px 9px;
+  background: transparent;
 }
 a.search-submit-btn {
   position: absolute;
   left: 27px;
-  color: #1d4d8b;
+  color: $primary-color;
   padding: 5px !important;
   top: 5px;
 }
@@ -1557,5 +1577,11 @@ cite.date {
   transition: 0.3s;
   &:hover {
     box-shadow: 0 0px 15px rgba($color: #000000, $alpha: 0.15);
+  }
+}
+.navbar-toggler{
+  border: 1px rgba($color: #fff, $alpha: 0.30) solid;
+  .fas{
+color: #fff;
   }
 }

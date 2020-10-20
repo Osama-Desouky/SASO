@@ -108,6 +108,9 @@
   .top-bar .notification{
     margin-top: -2px;
   }
+  .main-nav{
+    background-image: none;
+  }
 }
 
 // Medium devices (tablets, less than 992px)
@@ -124,6 +127,7 @@
     margin-left: 0;
 
   }
+  
 }
 
 // Small devices (landscape phones, less than 768px)
