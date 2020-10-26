@@ -376,6 +376,10 @@
     .img-box {
       transition: 0.3s;
       text-align: center;
+      img{
+        vertical-align:top;
+        width: auto;
+      }
     }
   }
   .owl-dots{
