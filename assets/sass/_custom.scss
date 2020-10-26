@@ -16,7 +16,7 @@
       border-radius: 6px;
       padding: 0 10px;
       .dropdown-item {
-        text-align: right;
+        text-align: #{$start-direction};
         border-bottom: 1px solid #dfdfdf;
         padding: 12px 0;
         font-size: 14px;
@@ -28,41 +28,41 @@
     }
   }
   .user-info {
-    margin-left: 50px;
-    float: $right;
+    margin-#{$end-direction}: 50px;
+    float: #{$start-direction};
     > img {
       display: inline-block;
-      margin-left: 10px;
+      margin-#{$end-direction}: 10px;
     }
   }
   .today-date {
-    float: $right;
+    float: #{$start-direction};
     font-size: 14px;
   }
   .time-weather-list {
-    float: $right;
+    float: #{$start-direction};
     margin-bottom: 0;
-    padding-right: 18px;
+    padding-#{$start-direction}: 18px;
     li {
       display: inline-block;
       padding: 0 35px;
-      border-right: 1px solid $gray-888;
+      border-#{$start-direction}: 1px solid $gray-888;
       font-size: 14px;
       line-height: 25px;
 
       &:first-child {
-        border-right: none;
-        padding-right: 0;
+        border-#{$start-direction}: none;
+        padding-#{$start-direction}: 0;
       }
       i,
       img {
-        margin-left: 10px;
+        margin-#{$end-direction}: 10px;
         font-size: 18px;
       }
     }
   }
   .search-btn {
-    float: $left;
+    float: #{$end-direction};
     position: relative;
     #s-btn {
       color: $gray-888;
@@ -75,7 +75,7 @@
     }
   }
   .lang {
-    float: $left;
+    float: #{$end-direction};
     text-align: center;
     font-size: 14px;
     line-height: 32px;
@@ -83,7 +83,7 @@
     padding: 0 50px;
   }
   .notification {
-    float: $left;
+    float: #{$end-direction};
     margin-top: 2px;
     #notification-btn {
       font-size: 20px;
@@ -101,17 +101,17 @@
         line-height: 18px;
         position: absolute;
         top: -3px;
-        right: -8px;
+        #{$start-direction}: -8px;
       }
     }
   }
   .link {
     color: $gray-888;
-    margin-left: 35px;
+    margin-#{$end-direction}: 35px;
     font-size: 14px;
     text-decoration: none;
     img {
-      margin-left: 10px;
+      margin-#{$end-direction}: 10px;
     }
   }
 }
@@ -119,22 +119,23 @@
   background-color: $primary-color;
   background-image: url($img-path + "art-work.svg");
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: #{$end-direction};
   padding: 17px 1rem;
   .navbar-collapse {
     flex-direction: row-reverse;
   }
   .dropdown-toggle::after {
-    margin-right: 0.255em;
+    margin-#{$start-direction}: 0.255em;
     vertical-align: 0.15em;
   }
   .nav-item {
-    margin-right: 85px;
+    margin-#{$start-direction}: 85px;
   }
   .nav-link {
     color: #fff;
     > img {
-      margin-left: 9px;
+      margin-#{$end-direction}: 9px;
+      vertical-align: top;
     }
   }
 }
@@ -165,7 +166,7 @@
     border: none;
     position: absolute;
     top: 10px;
-    left: 10px;
+    #{$end-direction}: 10px;
   }
   .img-box {
     width: 112px;
@@ -196,7 +197,7 @@
         border: none;
       }
       img {
-        margin-left: 22px;
+        margin-#{$end-direction}: 22px;
       }
       span {
         font-size: 15px;
@@ -225,7 +226,7 @@
     width: 105px;
     button#info-card-toggle {
       top: 16px;
-      left: 37px;
+      #{$end-direction}: 37px;
     }
     .img-box {
       margin-top: 49px;
@@ -236,7 +237,7 @@
     h2 {
       position: absolute !important;
       top: -9999px !important;
-      left: -9999px !important;
+      #{$end-direction}: -9999px !important;
       opacity: 0;
     }
     ul {
@@ -249,7 +250,7 @@
         span {
           position: absolute !important;
           top: -9999px !important;
-          left: -9999px !important;
+          #{$end-direction}: -9999px !important;
           opacity: 0;
         }
       }
@@ -332,7 +333,7 @@
     color: $color-default;
     margin-bottom: 19px;
     img {
-      margin-left: 20px;
+      margin-#{$end-direction}: 20px;
     }
   }
   .status {
@@ -344,7 +345,7 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    left: 0;
+    #{$end-direction}: 0;
     top: 0;
   }
 }
@@ -360,7 +361,7 @@
     img {
       position: absolute;
       top: 0;
-      left: calc(50% - 140px);
+      #{$end-direction}: calc(50% - 140px);
       z-index: -1;
     }
   }
@@ -376,16 +377,16 @@
     .img-box {
       transition: 0.3s;
       text-align: center;
-      img{
-        vertical-align:top;
+      img {
+        vertical-align: top;
         width: auto;
       }
     }
   }
-  .owl-dots{
+  .owl-dots {
     position: absolute;
-    left: 0;
-    right: 0;
+    #{$end-direction}: 0;
+    #{$start-direction}: 0;
     text-align: center;
     bottom: -40px;
     .owl-dot {
@@ -398,7 +399,7 @@
         display: inline-block;
         border-radius: 50%;
       }
-  
+
       &.active {
         span {
           background-color: $green;
@@ -410,7 +411,7 @@
 
   .all-btn {
     margin-top: 25px;
-    margin-left: 6px;
+    margin-#{$end-direction}: 6px;
   }
 }
 .noti-item {
@@ -420,11 +421,11 @@
   .icon {
     border: 2px solid #999999;
     border-radius: 16px;
-    float: $right;
+    float: #{$start-direction};
     width: 80px;
     height: 120px;
-    margin-right: 46px;
-    margin-left: 30px;
+    margin-#{$start-direction}: 46px;
+    margin-#{$end-direction}: 30px;
     transition: 0.3s;
     &.bell {
       background-image: url($img-path + "ic_notifications_active_48px.svg");
@@ -434,7 +435,7 @@
     }
   }
   .data {
-    float: right;
+    float: #{$start-direction};
     width: calc(100% - (80px + 30px + 46px));
 
     h3 {
@@ -487,14 +488,14 @@
     height: 18px;
     transition: 0.3s;
     vertical-align: middle;
-    margin-right: 6px;
+    margin-#{$start-direction}: 6px;
   }
   &.gray {
     color: #b1b1b1;
     &:hover {
       color: #18754d;
       .icon {
-        transform: translateX(-6px);
+        transform: translateX(6px * $transform-direction);
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18.004' viewBox='0 0 18 18.004'%3E%3Cpath id='arrow' d='M0,9a9,9,0,1,1,9,9A9.011,9.011,0,0,1,0,9ZM1.042,9A7.957,7.957,0,1,0,9,1.043,7.968,7.968,0,0,0,1.042,9Zm2.4.346,4.418-4.5.768.783L5.525,8.795H13.84V9.9H5.525l3.107,3.165-.768.783Z' fill='%2318754D'/%3E%3C/svg%3E%0A");
       }
     }
@@ -523,7 +524,7 @@
       border-bottom: 1px dashed rgba($color: #464749, $alpha: 0.3);
       margin: 0 12px;
       i {
-        margin-left: 20px;
+        margin-#{$end-direction}: 20px;
       }
     }
     ul {
@@ -547,7 +548,7 @@
           }
         }
         img {
-          margin-left: 25px;
+          margin-#{$end-direction}: 25px;
         }
       }
     }
@@ -578,7 +579,7 @@
     content: "";
     position: absolute;
     bottom: 0;
-    right: 0;
+    #{$start-direction}: 0;
     height: 2px;
     width: 35px;
     background-color: #18754d;
@@ -623,6 +624,8 @@
         line-height: 30px;
         transition: 0.3s;
         margin-bottom: 20px;
+        height: 30px;
+    overflow: hidden;
       }
 
       p {
@@ -654,13 +657,13 @@
     }
   }
   .all-btn {
-    margin-left: 20px;
+    margin-#{$end-direction}: 20px;
     margin-bottom: 20px;
   }
-  .owl-dots{
+  .owl-dots {
     position: absolute;
-    left: 0;
-    right: 0;
+    #{$end-direction}: 0;
+    #{$start-direction}: 0;
     text-align: center;
     bottom: -40px;
     .owl-dot {
@@ -673,7 +676,7 @@
         display: inline-block;
         border-radius: 50%;
       }
-  
+
       &.active {
         span {
           background-color: $green;
@@ -691,12 +694,12 @@
   height: calc(100% - 68px);
   // 68px is the title height + margin
   .all-btn {
-    margin-left: 20px;
+    margin-#{$end-direction}: 20px;
     margin-bottom: 20px;
   }
 }
 .proof-list {
-  padding-left: 15px;
+  padding-#{$end-direction}: 15px;
   padding-top: 23px;
   ul {
     padding: 0;
@@ -705,9 +708,9 @@
       display: block;
       position: relative;
       .img-box {
-        float: $right;
-        margin-left: 35px;
-        margin-right: 30px;
+        float: #{$start-direction};
+        margin-#{$end-direction}: 35px;
+        margin-#{$start-direction}: 30px;
         width: 60px;
         height: 60px;
         margin-top: 15px;
@@ -717,7 +720,7 @@
         }
       }
       .data {
-        float: $right;
+        float: #{$start-direction};
         width: calc(100% - (60px + 35px + 30px));
         border-bottom: 1px solid #cecece;
         margin-bottom: 12px;
@@ -806,7 +809,7 @@
     margin-bottom: 110px;
   }
   .em-label {
-    float: $right;
+    float: #{$start-direction};
     font-size: 15px;
     color: #6d6d6d;
     line-height: 45px;
@@ -821,7 +824,7 @@
   position: relative;
   border-radius: 26px;
   padding: 8px 12px;
-  padding-left: 50px;
+  padding-#{$end-direction}: 50px;
   text-align: center;
   min-width: 150px;
   font-size: 18px;
@@ -836,14 +839,14 @@
     background-size: cover;
     position: absolute;
     top: 14px;
-    left: 24px;
+    #{$end-direction}: 24px;
   }
   &.btn-success {
     background-color: #18754d;
     &:hover {
       background-color: #239866;
       &::after {
-        left: 20px;
+        #{$end-direction}: 20px;
       }
     }
   }
@@ -877,7 +880,7 @@
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
+    #{$end-direction}: 0;
   }
   h5 {
     font-size: 20px;
@@ -886,28 +889,28 @@
     margin-bottom: 27px;
   }
   .custom-control-input {
-    left: auto;
-    right: 0;
+    #{$end-direction}: auto;
+    #{$start-direction}: 0;
   }
   .custom-control {
-    padding-right: 35px;
-    padding-left: 0;
-    margin-right: 15px;
+    padding-#{$start-direction}: 35px;
+    padding-#{$end-direction}: 0;
+    margin-#{$start-direction}: 15px;
   }
   .custom-control-label {
     cursor: pointer;
     font-size: 16px;
     line-height: 36px;
     &::before {
-      right: -35px;
-      left: auto;
+      #{$start-direction}: -35px;
+      #{$end-direction}: auto;
       background: none;
       border-color: #ffffff;
       top: 10px;
     }
     &::after {
-      right: -35px;
-      left: auto;
+      #{$start-direction}: -35px;
+      #{$end-direction}: auto;
       top: 10px;
     }
   }
@@ -943,8 +946,8 @@
       background-color: #ffffff;
       color: #666666;
       i {
-        float: left;
-        margin-left: 12px;
+        float: #{$end-direction};
+        margin-#{$end-direction}: 12px;
         line-height: inherit;
       }
     }
@@ -1017,7 +1020,7 @@ footer {
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
+    #{$end-direction}: 0;
   }
   .copy {
     margin-top: 55px;
@@ -1027,7 +1030,7 @@ footer {
   .logos {
     margin-top: 35px;
     img:first-child {
-      margin-left: 30px;
+      margin-#{$end-direction}: 30px;
     }
   }
 }
@@ -1038,10 +1041,10 @@ footer {
 }
 .search-box {
   position: absolute;
-  left: 0;
+  #{$end-direction}: 0;
   top: 30px;
   width: 400px;
-  padding-left: 50px;
+  padding-#{$end-direction}: 50px;
   background-color: #fff;
   display: none;
   z-index: 10;
@@ -1056,14 +1059,14 @@ footer {
 }
 a.search-submit-btn {
   position: absolute;
-  left: 27px;
+  #{$end-direction}: 27px;
   color: $primary-color;
   padding: 5px !important;
   top: 5px;
 }
 a.close-search-btn {
   position: absolute;
-  left: 3px;
+  #{$end-direction}: 3px;
   color: #777 !important;
   font-size: 20px;
   padding: 5px !important;
@@ -1105,7 +1108,7 @@ a.close-search-btn {
       content: "";
       position: absolute;
       bottom: -10px;
-      right: 0;
+      #{$start-direction}: 0;
       height: 3px;
       width: 105px;
       background-color: #0096b6;
@@ -1123,7 +1126,7 @@ a.close-search-btn {
     border: none;
     position: absolute;
     top: 8px;
-    left: 8px;
+    #{$end-direction}: 8px;
   }
 }
 .tabs {
@@ -1133,10 +1136,11 @@ a.close-search-btn {
       background-color: #fff;
       color: $color-default;
       font-size: 16px;
-      margin-left: 10px;
+      margin-#{$end-direction}: 10px;
       border-radius: 18px;
       padding: 6px 12px 5px;
       box-shadow: 0 1px 3px rgba($color: #000000, $alpha: 0.08);
+      margin-bottom: 15px;
       &.active {
         background-color: $primary-color;
         color: #fff;
@@ -1157,7 +1161,7 @@ a.close-search-btn {
         font-size: 18px;
         font-weight: bold;
         border: 1px solid #646870;
-        margin-left: 11px;
+        margin-#{$end-direction}: 11px;
         border-radius: 8px;
         padding: 0;
         width: 34px;
@@ -1213,6 +1217,8 @@ a.close-search-btn {
     font-size: 16px;
     color: #464749;
     font-weight: bold;
+    max-width: calc(100% - 20px);
+    text-align: center;
   }
   button {
     opacity: 0;
@@ -1246,7 +1252,7 @@ a.close-search-btn {
       background: none;
       color: $color-default;
       font-size: 16px;
-      margin-left: 10px;
+      margin-#{$end-direction}: 10px;
       border-radius: 18px;
       padding: 6px 12px 5px;
       &.active {
@@ -1273,7 +1279,7 @@ a.close-search-btn {
   position: relative;
   .date-toggle {
     position: absolute;
-    left: 15px;
+    #{$end-direction}: 15px;
     top: 12px;
     cursor: pointer;
   }
@@ -1315,7 +1321,7 @@ a.close-search-btn {
     color: #fff;
     font-size: 18px;
     font-weight: normal;
-    border-left: 1px solid #fff;
+    border-#{$end-direction}: 1px solid #fff;
   }
   td {
     color: #464749;
@@ -1334,7 +1340,7 @@ a.close-search-btn {
   padding: 7px 10px 8px;
   transition: 0.3s;
   img {
-    margin-right: 6px;
+    margin-#{$start-direction}: 6px;
   }
   &:hover {
     box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
@@ -1353,8 +1359,8 @@ a.close-search-btn {
     border-radius: 16px;
     width: 80px;
     height: 95px;
-    margin-right: 25px;
-    margin-left: 30px;
+    margin-#{$start-direction}: 25px;
+    margin-#{$end-direction}: 30px;
     transition: 0.3s;
     &.bell {
       background-image: url($img-path + "ic_notifications_active_48px.svg");
@@ -1424,8 +1430,8 @@ a.close-search-btn {
     transition: inherit;
   }
   > img {
-    margin-left: 40px;
-    margin-right: 25px;
+    margin-#{$end-direction}: 40px;
+    margin-#{$start-direction}: 25px;
   }
   h5 {
     font-size: 18px;
@@ -1441,7 +1447,7 @@ a.close-search-btn {
       display: inline-block;
       font-size: 14px;
       color: $color-default;
-      margin-right: 20px;
+      margin-#{$start-direction}: 20px;
       border-radius: 13px;
       border: 1px solid #dce2ee;
       padding: 4px 14px;
@@ -1454,7 +1460,7 @@ a.close-search-btn {
       width: 20px;
       height: 20px;
       display: inline-block;
-      margin-left: 10px;
+      margin-#{$end-direction}: 10px;
       vertical-align: bottom;
     }
     &.in-progress {
@@ -1500,8 +1506,8 @@ a.close-search-btn {
     transition: inherit;
   }
   > img {
-    margin-left: 30px;
-    margin-right: 28px;
+    margin-#{$end-direction}: 30px;
+    margin-#{$start-direction}: 28px;
   }
   h5 {
     font-size: 16px;
@@ -1536,7 +1542,7 @@ cite.date {
   margin-bottom: 14px;
   display: block;
   img {
-    margin-left: 8px;
+    margin-#{$end-direction}: 8px;
     width: auto !important;
     display: inline-block !important;
   }
@@ -1558,11 +1564,11 @@ cite.date {
   &::before {
     content: "";
     position: absolute;
-    right: 0;
+    #{$start-direction}: 0;
     top: 0;
     width: 30px;
     height: 27px;
-    background-image: url($img-path + "quote-right.svg");
+    background-image: url($img-path + "quote-#{$start-direction}.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -1570,18 +1576,18 @@ cite.date {
   &::after {
     content: "";
     position: absolute;
-    left: 0;
+    #{$end-direction}: 0;
     top: 0;
     width: 30px;
     height: 27px;
-    background-image: url($img-path + "quote-left.svg");
+    background-image: url($img-path + "quote-#{$end-direction}.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
   }
   .auther {
     position: absolute;
-    left: 0;
+    #{$end-direction}: 0;
     bottom: 0;
     color: #b8bcc5;
     font-size: 12px;
@@ -1592,20 +1598,20 @@ cite.date {
       height: 1px;
       background-color: #c9ced8;
       display: inline-block;
-      margin-left: 10px;
+      margin-#{$end-direction}: 10px;
       vertical-align: middle;
     }
   }
 }
 #addToFav {
-  float: left;
+  float: #{$end-direction};
   background: none;
   border: none;
   font-size: 16px;
   color: $color-default;
   padding: 5px 10px;
   i {
-    margin-left: 6px;
+    margin-#{$end-direction}: 6px;
   }
   border-radius: 25px;
   box-shadow: 0 0px 15px rgba($color: #000000, $alpha: 0.08);
@@ -1618,5 +1624,41 @@ cite.date {
   border: 1px rgba($color: #fff, $alpha: 0.3) solid;
   .fas {
     color: #fff;
+  }
+}
+
+// LTR
+
+html[dir="ltr"] {
+  .all-btn {
+    .icon {
+      transform: translateX(0px) rotateY(180deg);
+    }
+    &:hover {
+      .icon {
+        transform: translateX(6px * $transform-direction) rotateY(180deg);
+      }
+    }
+  }
+  .submit-btn{
+    &::after{
+      transform: rotateY(180deg);
+    }
+  }
+  .inner-page-header .breadcrumb-item+.breadcrumb-item::before
+  {
+    transform: rotateY(180deg);
+  }
+  .inner-pagination .pagination .page-item.arrow .page-link{
+    img{
+      transform: rotateY(180deg);
+    }
+  }
+  .inner-search-box .form-control{
+    padding: 10px 45px 9px 11px;
+  }
+  .select2-container--default .select2-selection--single .select2-selection__arrow
+  {
+    right: 15px !important;
   }
 }

@@ -8,11 +8,12 @@
   <!-- fontawesome5 -->
   <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
   <!-- swiper css -->
-  <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
   <!-- select 2 css -->
   <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
   <!-- custom -->
-  <link rel="stylesheet" href="../assets/css/styles.min.css">
+  <link rel="stylesheet" href="../assets/css/styles-ltr.min.css">
 </head>
 
 <body>
@@ -64,10 +65,10 @@
           <img src="../assets/images/search-icon.svg" alt="" srcset="">
         </a>
         <div class="search-box">
-          <input type="text" class="form-control no-outline" placeholder="إبحث في الموقع ... " />
-          <a href="javascript:;" class="search-submit-btn" title="بحث">
+          <input type="text" class="form-control no-outline" placeholder="Search the site ... " />
+          <a href="javascript:;" class="search-submit-btn" title="Search">
             <i class="fas fa-search"></i></a>
-          <a href="javascript:;" class="close-search-btn" title="اغلاق">
+          <a href="javascript:;" class="close-search-btn" title="Close">
             <i class="fas fa-times"></i></a>
         </div>
       </div>
@@ -265,13 +266,13 @@
               </div>
             </div>
           </div>
-          <div class="swiper-container main-slider" dir="rtl">
+          <div class="swiper-container main-slider">
             <div class="title">
               <img src="../assets/images/title-bg.svg" alt="">
-              The latest circulars and decisions
+              The latest decisions
             </div>
             <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
+            <div class="owl-carousel">
               <!-- Slides -->
               <div class="swiper-slide">
                 <div class="row">
@@ -376,10 +377,6 @@
                 <span class="icon"></span>
               </a>
             </div>
-
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
           </div>
         </div>
       </div>
@@ -434,10 +431,10 @@
               <div class="inner-title lg-line">
                 Society Authority
               </div>
-              <div class="swiper-container news-slider" dir="rtl">
+              <div class="swiper-container news-slider" >
 
                 <!-- Additional required wrapper -->
-                <div class="swiper-wrapper">
+                <div class="owl-carousel">
                   <!-- Slides -->
                   <div class="swiper-slide">
                     <div class="img-box">
@@ -489,8 +486,7 @@
                   </a>
                 </div>
 
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
+            
 
               </div>
             </div>
@@ -611,7 +607,7 @@
 
                     <button type="button" class="btn btn-primary show-results" id="showResult">
                       View results
-                      <i class="far fa-arrow-alt-circle-left"></i>
+                      <i class="far fa-arrow-alt-circle-right"></i>
                     </button>
                   </div>
                 </form>
@@ -627,7 +623,7 @@
                           <div class="poll-percent">Lorem Ipsum is the 92% model (7978)</div>
                           <div class="resultbarbase"
                             >
-                            <div style="float:right;  height:16px;width:92%;background-color:#0a6562;border:0 none">
+                            <div style="float:left;  height:16px;width:92%;background-color:#0a6562;border:0 none">
                             </div>
                           </div>
                         </div>
@@ -635,7 +631,7 @@
                           <div class="poll-percent">Default setting 2% (260)</div>
                           <div class="resultbarbase"
                             >
-                            <div style="float:right;  height:16px;width:2%;background-color:#7ce8e4;border:0 none">
+                            <div style="float:left;  height:16px;width:2%;background-color:#7ce8e4;border:0 none">
                             </div>
                           </div>
                         </div>
@@ -643,7 +639,7 @@
                           <div class="poll-percent">In designs to display 4% (432)</div>
                           <div class="resultbarbase"
                             >
-                            <div style="float:right;  height:16px;width:4%;background-color:#00afa9;border:0 none">
+                            <div style="float:left;  height:16px;width:4%;background-color:#00afa9;border:0 none">
                             </div>
                           </div>
                         </div>
@@ -651,7 +647,7 @@
                           <div class="poll-percent">Lorem epsom 18% (432.62%))</div>
                           <div class="resultbarbase"
                             >
-                            <div style="float:right;  height:16px;width:18%;background-color:#26e44f;border:0 none">
+                            <div style="float:left;  height:16px;width:18%;background-color:#26e44f;border:0 none">
                             </div>
                           </div>
                         </div>
@@ -736,7 +732,7 @@
   <!-- Bootstrap -->
   <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <!-- swiper -->
-  <script src="../node_modules/swiper/swiper-bundle.min.js"></script>
+  <script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
   <!-- select 2 -->
   <script src="../node_modules/select2/dist/js/select2.full.min.js"></script>
   <!-- inline -->
