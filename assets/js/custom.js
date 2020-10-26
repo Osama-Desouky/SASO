@@ -1,24 +1,30 @@
 $(document).ready(function () {
   $(".custom-select").select2();
   $('[data-toggle="tooltip"]').tooltip();
-  var mainSwiper = new Swiper(".main-slider", {
-    loop: true,
+  $('.main-slider .owl-carousel,.news-slider .owl-carousel').owlCarousel({
+    nav:false,
+    items:1,
+    dots:true,
+    rtl:true
+})
+  // var mainSwiper = new Swiper(".main-slider", {
+  //   loop: true,
 
-    // If we need pagination
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-  var newsSwiper = new Swiper(".news-slider", {
-    loop: true,
+  //   // If we need pagination
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //     clickable: true,
+  //   },
+  // });
+  // var newsSwiper = new Swiper(".news-slider", {
+  //   loop: true,
 
-    // If we need pagination
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+  //   // If we need pagination
+  //   pagination: {
+  //     el: ".swiper-pagination",
+  //     clickable: true,
+  //   },
+  // });
   $("#info-card-toggle").on("click", function () {
     $(".user-info-card").toggleClass("collapsed");
     $("#user-info-other-side").toggleClass("collapsed");
@@ -28,12 +34,12 @@ $(document).ready(function () {
       $(this).attr("data-original-title", "تصغير القائمة");
     }
     $(this).blur();
-    var interval = setInterval(function () {
-      mainSwiper.update();
-    }, 5);
-    setTimeout(function () {
-      clearInterval(interval);
-    }, 300);
+    // var interval = setInterval(function () {
+    //   mainSwiper.update();
+    // }, 5);
+    // setTimeout(function () {
+    //   clearInterval(interval);
+    // }, 300);
   });
   $("#fav-toggle").on("click", function () {
     $("#fav-list").slideToggle();

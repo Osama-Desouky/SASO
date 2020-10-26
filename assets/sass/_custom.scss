@@ -378,17 +378,32 @@
       text-align: center;
     }
   }
-  .swiper-pagination-bullet {
-    width: 9px;
-    height: 9px;
-    background-color: #999999;
-    opacity: 1;
-    margin: 0 11px !important;
-    &.swiper-pagination-bullet-active {
-      background-color: $green;
-      transform: scale(2);
+  .owl-dots{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: -40px;
+    .owl-dot {
+      span {
+        width: 9px;
+        height: 9px;
+        background-color: #999999;
+        opacity: 1;
+        margin: 0 11px !important;
+        display: inline-block;
+        border-radius: 50%;
+      }
+  
+      &.active {
+        span {
+          background-color: $green;
+          transform: scale(2);
+        }
+      }
     }
   }
+
   .all-btn {
     margin-top: 25px;
     margin-left: 6px;
@@ -638,15 +653,29 @@
     margin-left: 20px;
     margin-bottom: 20px;
   }
-  .swiper-pagination-bullet {
-    width: 9px;
-    height: 9px;
-    background-color: #999999;
-    opacity: 1;
-    margin: 0 11px !important;
-    &.swiper-pagination-bullet-active {
-      background-color: $green;
-      transform: scale(2);
+  .owl-dots{
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    bottom: -40px;
+    .owl-dot {
+      span {
+        width: 9px;
+        height: 9px;
+        background-color: #999999;
+        opacity: 1;
+        margin: 0 11px !important;
+        display: inline-block;
+        border-radius: 50%;
+      }
+  
+      &.active {
+        span {
+          background-color: $green;
+          transform: scale(2);
+        }
+      }
     }
   }
 }
@@ -767,7 +796,7 @@
   padding: 75px 40px 36px;
   .select2 {
     margin-bottom: 32px;
-    width:100%!important;
+    width: 100% !important;
   }
   .form-group {
     margin-bottom: 110px;
@@ -918,21 +947,21 @@
   }
 }
 // poll results
-.singlePollResult{
+.singlePollResult {
   margin-bottom: 15px;
-    clear: both;
-    .resultbarbase{
-      margin-top: 5px;
-    height: 5px!important;
+  clear: both;
+  .resultbarbase {
+    margin-top: 5px;
+    height: 5px !important;
     width: 100%;
-    background-color: #EDEDED;
+    background-color: #ededed;
     border: 0 none;
-    >div{
-      height: 100%!important;
+    > div {
+      height: 100% !important;
     }
-    }
-    .poll-percent {
-      font-size: 15px;
+  }
+  .poll-percent {
+    font-size: 15px;
   }
 }
 .relative-card {
@@ -946,12 +975,12 @@
   border: 2px solid #d9d9d9;
   transition: 0.3s;
   margin-bottom: 30px;
-.img-box{
-  overflow: hidden;
-  img {
-    margin-bottom: 35px;
+  .img-box {
+    overflow: hidden;
+    img {
+      margin-bottom: 35px;
+    }
   }
-}
   h4 {
     font-size: 15px;
     transition: 0.3s;
@@ -1504,6 +1533,8 @@ cite.date {
   display: block;
   img {
     margin-left: 8px;
+    width: auto !important;
+    display: inline-block !important;
   }
 }
 .img-wrapper {
@@ -1579,9 +1610,9 @@ cite.date {
     box-shadow: 0 0px 15px rgba($color: #000000, $alpha: 0.15);
   }
 }
-.navbar-toggler{
-  border: 1px rgba($color: #fff, $alpha: 0.30) solid;
-  .fas{
-color: #fff;
+.navbar-toggler {
+  border: 1px rgba($color: #fff, $alpha: 0.3) solid;
+  .fas {
+    color: #fff;
   }
 }
