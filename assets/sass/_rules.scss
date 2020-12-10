@@ -1,6 +1,6 @@
 
 html[dir="rtl"] body {
-  font-family: $font-ar;
+  font-family: $font-ar , 'BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";';
 }
 body {
   color: $color-default;
