@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- fontawesome5 -->
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <!-- swiper css -->
+  
+  <!-- select 2 css -->
+  <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
+  <!-- custom -->
+  <link rel="stylesheet" href="../assets/css/styles-ltr.min.css">
+</head>
+
+<body>
+  <div class="top-bar">
+    <div class="container">
+      <div class="user-info">
+        <img src="../assets/images/profile-icon.svg" alt="profile-icon">
+        <div class="dropdown show">
+          <a class="dropdown-toggle" href="javascript:;" role="button" id="user-info-list" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Raed Hussein Al-Shbatat
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="user-info-list">
+            <a class="dropdown-item" href="javascript:;">Account Information</a>
+            <a class="dropdown-item" href="javascript:;">Services</a>
+            <a class="dropdown-item danger" href="javascript:;">sign out</a>
+          </div>
+        </div>
+      </div>
+      <div class="today-date">
+        <span class="hijri">
+          Tuesday 17 Shawwal 1441 AH
+        </span>
+        &nbsp;
+        -
+        &nbsp;
+        <span class="gregorian">
+          11 June 2020
+        </span>
+      </div>
+      <ul class="time-weather-list">
+        <li>
+          <i class="far fa-clock"></i>
+          2:35 pm
+        </li>
+        <li>
+          <img src="../assets/images/cloud-icon.svg" alt="" srcset="">
+          o
+          16
+        </li>
+        <li>
+          <i class="fas fa-mosque"></i>
+          Afternoon: 2:45 pm
+        </li>
+      </ul>
+      <div class="search-btn">
+        <a href="javascript:;" id="s-btn">
+          <img src="../assets/images/search-icon.svg" alt="" srcset="">
+        </a>
+        <div class="search-box">
+          <input type="text" class="form-control no-outline" placeholder="Search the site ..." />
+          <a href="javascript:;" class="search-submit-btn" title="Search">
+            <i class="fas fa-search"></i></a>
+          <a href="javascript:;" class="close-search-btn" title="Close">
+            <i class="fas fa-times"></i></a>
+        </div>
+      </div>
+      <a href="javascript:;" class="lang">
+        English
+      </a>
+      <div class="dropdown show notification">
+        <a href="javascript:;" role="button" id="notification-btn" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <i class="far fa-bell"></i>
+          <span class="count">3</span>
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="notification-btn">
+          <a class="dropdown-item" href="javascript:;">Action</a>
+          <a class="dropdown-item" href="javascript:;">Another action</a>
+          <a class="dropdown-item" href="javascript:;">Something else here</a>
+        </div>
+      </div>
+      <a href="javascript:;" class="link float-left">
+        <img src="../assets/images/mai-icon.svg" alt="" srcset="">
+        E-mail</a>
+      <a href="javascript:;" class="link float-left">
+        <img src="../assets/images/support-icon.svg" alt="" srcset="">
+        Technical support</a>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <!-- start NavBar -->
+  <nav class="navbar navbar-expand-lg main-nav">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="../assets/images/logo.svg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="main_nav">
+
+        <ul class="navbar-nav">
+          <li class="nav-item active"> <a class="nav-link" href="#">
+              <img src="../assets/images/bx-home-alt.svg" alt="">
+
+              Main </a> </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Electronic Services </a>
+            <ul class="dropdown-menu fade-up">
+              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Departments</a>
+            <ul class="dropdown-menu fade-up">
+              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Circulars</a>
+            <ul class="dropdown-menu fade-up">
+              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="#"> Document library </a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Media Center </a>
+            <ul class="dropdown-menu fade-up">
+              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div> <!-- navbar-collapse.// -->
+    </div>
+
+  </nav>
+  <!-- end NavBar -->
+  <section class="content">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-12 col-md fav-wrapper">
+          <div class="user-info-card">
+            <div class="img-box">
+              <img src="../assets/images/profile-img.png" alt="" srcset="">
+            </div>
+            <!-- <h2>Raed Hussein Al-Shbatat</h2> -->
+            <div class="headers-for-xs">
+              <h2 class="job-title d-block d-md-none">The direct boss</h2>
+              <h2>Raed Hussein Al-Shbatat</h2>
+            </div>
+            <ul class="d-none d-md-block">
+              <li>
+                <img src="../assets/images/account-settings-icon.svg" alt="" srcset="">
+                <span>Developer</span>
+              </li>
+              <li>
+                <img src="../assets/images/settings-outline-icon.svg" alt="" srcset="">
+                <span>information technology</span>
+              </li>
+              <li>
+                <img src="../assets/images/mail-light-icon.svg" alt="" srcset="">
+                <span>
+                  <a href="mailto: r.shabatat.v@saso.gov.sa">r.shabatat.v@saso.gov.sa</a>
+                </span>
+              </li>
+              <li>
+                <img src="../assets/images/location-icon.svg" alt="" srcset="">
+                <span>
+                  Riyadh
+                </span>
+              </li>
+              <li>
+                <img src="../assets/images/phone-icon.svg" alt="" srcset="">
+                <span>
+                  9823
+                </span>
+              </li>
+              <li>
+                <img src="../assets/images/user-o-icon.svg" alt="" srcset="">
+                <span>
+                  <h4>Section Manager</h4>
+                  Abdul Karim Nasser Al-Idyani
+                </span>
+              </li>
+              <li>
+                <img src="../assets/images/serv-icon.svg" alt="" srcset="">
+                <span>
+                  <a href="javascript:;">
+                    More
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="fav-card d-none d-md-block">
+            <h4 class="title">
+              <i class="far fa-star"></i>
+              Favorite
+
+            </h4>
+            <ul id="fav-list">
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/serv-sm-icon.svg" alt="" srcset="">
+                  Leave request service
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/calender-sm-icon.svg" alt="" srcset="">
+                  Attendance and departure detection
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/desk-sm-icon.svg" alt="" srcset="">
+                  Request out of hours
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/car-fix-sm-icon.svg" alt="" srcset="">
+                  Car maintenance service
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/serv-icon-dark.svg" alt="" srcset="">
+                  More
+                </a>
+              </li>
+            </ul>
+            <button id="fav-toggle" type="button">
+              <i class="fas fa-chevron-up"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-12 col-md" id="fav-other-side">
+          <!-- start here -->
+          <section class="inner-page-header">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="javascript:;">Main</a>
+                </li>
+                <li class="breadcrumb-item" aria-current="page">Circulars and decisions</li>
+              </ol>
+            </nav>
+            <h1>Circulars and decisions</h1>
+          </section>
+          <!-- end here  -->
+          <div class="tabs">
+            <div class="row">
+              <div class="col-12 col-lg-6 col-xl-9">
+                <nav>
+                  <div class="nav nav-pills" id="nav-tab" role="tablist">
+                    <a class="nav-item nav-link active" id="personal-services-tab" data-toggle="tab" href="#personal-services" role="tab" aria-controls="personal-services" aria-selected="true">All</a>
+                    <a class="nav-item nav-link" id="official-tasks-tab" data-toggle="tab" href="#official-tasks" role="tab" aria-controls="official-tasks" aria-selected="false">Human Resource Management</a>
+                    <a class="nav-item nav-link" id="logistic-tasks-tab" data-toggle="tab" href="#logistic-tasks" role="tab" aria-controls="logistic-tasks" aria-selected="false">Information Technology Management</a>
+                    <a class="nav-item nav-link" id="review-services-tab" data-toggle="tab" href="#review-services" role="tab" aria-controls="review-services" aria-selected="false">Cyber ​​Security Department</a>
+                    <a class="nav-item nav-link" id="other-services-tab" data-toggle="tab" href="#other-services" role="tab" aria-controls="other-services" aria-selected="false">Sales Administration</a>
+                  </div>
+                </nav>
+              </div>
+              <div class="col-12 col-lg-6 col-xl-3">
+                <form>
+                  <div class="form-group inner-search-box">
+                    <input type="text" name="search" id="inner-search" placeholder="Search circulars" class="form-control">
+                    <button type="submit">
+                      <img src="../assets/images/search-inner-icon.svg">
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="personal-services" role="tabpanel" aria-labelledby="personal-services-tab">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="noti-full-item">
+                      <div class="icon bell"></div>
+                      <div class="data">
+                        <h3>Determine the percentage of employees' attendance at 100%, starting from 08/30/2020</h3>
+                        <p>August 25, 2020</p>
+                        <span>Human Resource Management</span>
+                      </div>
+                      <a href="javascript:;" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="noti-full-item">
+                      <div class="icon bell"></div>
+                      <div class="data">
+                        <h3>Update the employees' practical experiences, knowing that the service is available for a week only</h3>
+                        <p>August 25, 2020</p>
+                        <span class="green">Information Technology Management</span>
+                      </div>
+                      <a href="javascript:;" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="noti-full-item">
+                      <div class="icon bell"></div>
+                      <div class="data">
+                        <h3>Return to the workplace with the precautionary measures</h3>
+                        <p>August 25, 2020</p>
+                        <span>Human Resource Management</span>
+                      </div>
+                      <a href="javascript:;" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="noti-full-item">
+                      <div class="icon bell"></div>
+                      <div class="data">
+                        <h3>Early exit to follow up children's education from a distance </h3>
+                        <p>August 25, 2020</p>
+                        <span class="brown">Cyber ​​Security Department</span>
+                      </div>
+                      <a href="javascript:;" class="stretched-link"></a>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="noti-full-item">
+                      <div class="icon bell"></div>
+                      <div class="data">
+                        <h3>Eid Al-Adha holiday from 07/23/2020 to 07/09/2020</h3>
+                        <p>August 25, 2020</p>
+                        <span>Human Resource Management</span>
+                      </div>
+                      <a href="javascript:;" class="stretched-link"></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="official-tasks" role="tabpanel" aria-labelledby="official-tasks-tab"></div>
+              <div class="tab-pane fade" id="logistic-tasks" role="tabpanel" aria-labelledby="logistic-tasks-tab"></div>
+              <div class="tab-pane fade" id="review-services" role="tabpanel" aria-labelledby="review-services-tab"></div>
+              <div class="tab-pane fade" id="other-services" role="tabpanel" aria-labelledby="other-services-tab"></div>
+            </div>
+          </div>
+          <nav aria-label="Page navigation" class="inner-pagination">
+            <ul class="pagination justify-content-center">
+              <li class="page-item arrow">
+                <a class="page-link disabled" href="#" aria-label="Previous">
+                  <span aria-hidden="true"><img src="../assets/images/right-arrow.svg" alt="" srcset=""></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">4</a></li>
+              <li class="page-item"><a class="page-link" href="#">5</a></li>
+              <li class="page-item dots"><a class="page-link" href="#">...</a></li>
+              <li class="page-item arrow">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true"><img src="../assets/images/left-arrow.svg" alt="" srcset=""></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="copy float-right">
+        All rights reserved to the Saudi Standards, Metrology and Quality Organization © 2020
+      </div>
+      <div class="logos float-left">
+        <img src="../assets/images/saso-logo.svg" alt="">
+        <img src="../assets/images/vision-logo.svg" alt="">
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </footer>
+  <!-- jQuery -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- swiper -->
+
+  <!-- select 2 -->
+  <script src="../node_modules/select2/dist/js/select2.full.min.js"></script>
+  <!-- inline -->
+  <!-- custom Js -->
+  <script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+$font-ar:'almarai -apple-system';
+$font-path:'../fonts/';
+
+$img-path:'../images/';
+
+// colors
+$light-cyan-bg:#E7F1F3;
+$semon-color:#FF2C00;
+$gray-888:#888888;
+$color-default:#464749;
+$body-bg:#F9F9F9;
+$primary-color:#0096B6;
+$gray-color:#9297A1;
+$green-color:#23A56D;
+$orange-color:#FA8C32;
+$brown-color:#9A6A3C;
+
+$theme-colors: (
+  "primary": $primary-color,
+  "warning": $orange-color,
+  "success": $green-color,
+  "gray": $gray-color,
+);
+//rtl support
+$right:right;
+$left:left;

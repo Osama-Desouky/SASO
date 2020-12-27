@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="inprogress-icon" transform="translate(-1010 -120)">
+    <path id="Rectangle_881" data-name="Rectangle 881" d="M10,0h0a0,0,0,0,1,0,0V20a0,0,0,0,1,0,0h0A10,10,0,0,1,0,10v0A10,10,0,0,1,10,0Z" transform="translate(1010 120)" fill="#0096b6"/>
+    <g id="Ellipse_117" data-name="Ellipse 117" transform="translate(1010 120)" fill="none" stroke="#0096b6" stroke-width="2">
+      <circle cx="10" cy="10" r="10" stroke="none"/>
+      <circle cx="10" cy="10" r="9" fill="none"/>
+    </g>
+  </g>
+</svg>

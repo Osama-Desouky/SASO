@@ -1,0 +1,418 @@
+﻿@using SASO.Almajlis.Resources
+@using SASO.InternalPortal.Web.Common
+@using SASO.Almajlis.Entities.Enumerations
+
+@{
+    ViewBag.Title = Common.Leave;
+}
+<script src="~/Scripts/AngularJS/angular.js"></script>
+<script src="~/Scripts/AngularJS/spin.js"></script>
+<script src="~/Scripts/AngularJS/angular-spinner.js"></script>
+<script src="~/Scripts/AngularJS/angular-spinner.min.js"></script>
+<link href="~/App_Themes/Site/AngularJs/Content/token-input.css" rel="stylesheet" />
+<script src="~/Scripts/AngularJS/jquery-1.9.1.min.js"></script>
+<script src="~/Scripts/AngularJS/angular.min.js"></script>
+<script src="~/Scripts/AngularJS/ng-file-upload-shim.js"></script><!-- for no html5 browsers support -->
+<script src="~/Scripts/AngularJS/ng-file-upload.min.js"></script>
+<script src="~/Scripts/AngularJS/angular-loading-spinner.js"></script>
+<script src="~/Scripts/AngularJS/jquery.tokeninput.js"></script>
+<script src="~/Scripts/AngularJS/ng-table.js"></script>
+<script src="~/Scripts/AngularJS/app.js"></script>
+<script src="~/Scripts/AngularJS/app-ctrl.js"></script>
+<script src="~/Scripts/AngularJS/config.js?v=1"></script>
+<script src="~/Scripts/AngularJS/Leave/leave.service.js"></script>
+<script src="~/Scripts/AngularJS/UQCal.js"></script>
+<script src="~/Scripts/AngularJS/Leave/leaveCtrl.js"></script>
+<script src="~/Scripts/AngularJS/angular-toastr.tpls.js"></script>
+
+<script src="~/Scripts/AngularJS/common/user-service.js"></script>
+<script src="~/Scripts/AngularJS/common/common-service.js"></script>
+<script src="~/Scripts/AngularJS/components/hijri-datepicker/hijri-datepicker.component.js"></script>
+
+<script src="~/Scripts/AngularJS/components/employee-info/employee-informations.component.js"></script>
+<script src="~/Scripts/AngularJS/components/employee-picker/employee-picker.component.js"></script>
+<script src="~/Scripts/AngularJS/components/comment/comment-component.js"></script>
+
+<link href="~/App_Themes/Site/AngularJs/Content/angular-toastr.css" rel="stylesheet" />
+
+<link href="~/App_Themes/Site/AngularJs/Content/css/style.css" rel="stylesheet" />
+<script src="~/Scripts/AngularJS/components/attachment/attachment.directive.js"></script>
+
+<link href="~/App_Themes/Site/css/dt/bootstrap-datepicker.css" rel="stylesheet" />
+<script src="~/App_Themes/Site/css/dt/bootstrap-datepicker.js"></script>
+<script src="~/App_Themes/Site/css/dt/bootstrap-datepicker.ar.min.js"></script>
+
+<script src="~/Scripts/Common/Config.js"></script>
+<script src="~/Scripts/JQuery/UserFavorites.js"></script>
+
+
+<div class="col" id="fav-other-side">
+    <!-- start here -->
+    <section class="inner-page-header">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    <a href="~/Home/Index">@Common.Home</a>
+                </li>
+                <li class="breadcrumb-item" aria-current="page">@Common.EServices</li>
+            </ol>
+        </nav>
+        <h1>@Common.Leave</h1>
+    </section>
+    <div id="idForJS" ng-app="saso">
+        <div ng-controller="LeaveCtrl as le">
+            <div class="inner-card mt-40">
+                <nav class="float-right">
+                    <div class="nav nav-pills" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="new-order-tab" data-toggle="tab" href="#new-order" role="tab"
+                           aria-controls="new-order" aria-selected="true" ng-click="le.preparetoNewRequest()">@Common.NewRequest</a>
+                        <a class="nav-item nav-link" id="my-orders-tab" data-toggle="tab" href="#my-orders" role="tab"
+                           aria-controls="my-orders" aria-selected="false" ng-click="le.getMyRequests()">@Common.MyRequests</a>
+                        <a class="nav-item nav-link" id="my-tasks-tab" data-toggle="tab" href="#my-tasks" role="tab"
+                           aria-controls="my-tasks" aria-selected="false" ng-click="le.getMyTasks()">@Common.MyTasks</a>
+                    </div>
+                </nav>
+
+                <button id="addToFav" type="button" onclick="AddUserFavorites('@SiteStaticHelper.GetServiceId(ServicesEnum.Vacation)');">
+                    <i class="far fa-star"></i>
+                    @Common.AddToFav
+                </button>
+                <button id="removeToFav" type="button" onclick="RemoveUserFavorites('@SiteStaticHelper.GetServiceId(ServicesEnum.Vacation)');">
+                    <i class="far fa-star"></i>
+                    @Common.removeToFav
+                </button>
+                <button id="loadingToFav" type="button" onclick="RemoveUserFavorites('@SiteStaticHelper.GetServiceId(ServicesEnum.Vacation)');">
+                    <img src="~/App_Themes/Site/assets/images/loading32.gif" height="32" width="32" style="height:32px; width:32px" />
+                </button>
+
+                <div class="clearfix"></div>
+                <div class="tab-content" id="nav-tabContent">
+
+                    <span us-spinner="{radius:30, width:8, length: 16,position:'fixed', top: '50%', left: '50%'}"></span>
+                    <div class="tab-pane fade show active" id="new-order" role="tabpanel" aria-labelledby="new-order-tab">
+                        <form name="aspnetForm" novalidate>
+                            <div id="divPassed" ng-show="le.submitend">
+                                <div class="row">
+
+                                    <div class="form-group col-md-12 ng-cloak" id="divPassed">
+                                        <div style="width: 100%; text-align: center">
+                                            <label id="lblPassed" style="font-weight:bold; Font-Size: Large; ">
+                                                @Common.RequestSent
+                                            </label>
+                                            <br />
+                                            <img src="~/App_Themes/Site/assets/images/successrequest.png" height="80" width="80" /><br />
+                                            <label>
+                                                @Common.RequstId
+                                            </label>&nbsp;<label ng-bind="le.requestNB"></label><br />
+                                            <a id="profile-tab" style="cursor:pointer; display:none" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" ng-click="le.getMyRequests()">
+                                                @Common.MyReuests
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="divSubmit" ng-show="!le.submitted">
+                                <h2 class="dotted-title green">@Common.Requester</h2>
+                                @{
+                                    Html.RenderPartial("~/views/shared/Components/_Requester.cshtml");
+                                }
+                                <h2 class="dotted-title green">@Common.RequestInfo</h2>
+                                <div class="row">
+                                    <div class="col-12 col-lg-5 mt-1">
+                                        <div class="form-group">
+                                            <label for="select-1 " class="required">
+                                                @Common.LeaveMainType
+                                            </label>
+                                            <select class="form-control"
+                                                    id="LeaveMainType"
+                                                    name="LeaveMainType"
+                                                    ng-options="leaveMainType.TypeCode as leaveMainType.TypeDesc for leaveMainType in le.LeaveMainType"
+                                                    ng-model="le.formdata.SelectedMainTypeCode"
+                                                    ng-change="le.MainTypeChanged()"
+                                                    required>
+                                                <option value="">@Common.LeaveMainType</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-5 mt-1">
+                                        <div class="form-group">
+                                            <div ng-show="le.LeaveSubTypeVisable">
+                                                <label for="select-2 " class="required">@Common.LeaveSubType</label>
+                                                <select class="form-control"
+                                                        id="LeaveSubType"
+                                                        name="LeaveSubType"
+                                                        ng-options="leaveSubType.TypeCode as leaveSubType.TypeDesc for leaveSubType in le.LeaveSubType"
+                                                        ng-model="le.formdata.SelectedSubTypeCode"
+                                                        ng-change="le.SubTypeChanged()"
+                                                        required>
+                                                    <option value="">@Common.LeaveSubType</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-5 mt-1" ng-show="false">
+                                        <div class="form-group">
+                                            <label>
+                                                @Common.SalaryFlag
+                                                <b style="color:#ff0000">*</b>
+                                            </label>
+                                            <div class="form-control">
+                                                <input type="radio" name="SalaryFlag" id="SalaryFlagYes" value="1" ng-model="le.formdata.SalaryFlag" />
+                                                <label style="width:50px">
+                                                    @Common.Yes
+                                                </label>
+                                                <input type="radio" name="SalaryFlag" id="SalaryFlagNo" value="2" ng-model="le.formdata.SalaryFlag" />
+                                                <label style="width:50px">
+                                                    @Common.No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-5 mt-1 date">
+                                        <div class="form-group">
+                                            <label class="required">
+                                                @Common.FromDate
+                                            </label>
+                                            <div class="input-group input-append date" id="datePickerFromContainer">
+                                                <input type="text" class="form-control" name="date" id="fromDatePicker" readonly ng-model="le.formdata.FromDateFormat" />
+                                                <span class="input-group-addon add-on">
+                                                    <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </span>
+                                            </div>
+                                            <p style="color:#e61818; margin-left:5px; margin-right:5px">{{le.formdata.FromDateFormatHijri}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-5 mt-1 date">
+                                        <div class="form-group">
+                                            <label class="required">
+                                                @Common.ToDate
+                                            </label>
+                                            <div class="input-group input-append date" id="datePickerToContainer">
+                                                <input type="text" class="form-control" name="date" id="toDatePicker" readonly ng-model="le.formdata.FromDateFormat" />
+                                                <span class="input-group-addon add-on">
+                                                    <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                                                </span>
+                                            </div>
+                                            <p style="color:#e61818; margin-left:5px; margin-right:5px">{{le.formdata.ToDateFormatHijri}}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-2 mt-1">
+                                        <div class="form-group">
+                                            <label class="required">
+                                                @Common.BusinessTripDuration
+                                            </label>
+                                            <input name="LeaveDuration" id="LeaveDuration" class="form-control" required ng-model="le.formdata.LeaveDuration" disabled readonly />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-5 mt-1" desc="address">
+                                        <div class="form-group">
+                                            <label class="required">
+                                                @Common.LeaveAddress
+                                            </label>
+                                            <input name="Address" id="Address" class="form-control" required ng-model="le.formdata.Address" />
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-5 mt-1" ng-show="le.leaverules.altreq">
+                                        <div class="form-group">
+                                            <label class="required">
+                                                @Common.AlternativeEmp
+                                            </label>
+                                            <select id="AlternativeEmp"
+                                                    name="AlternativeEmp"
+                                                    class="form-control"
+                                                    ng-model="le.formdata.AltEmpNo"
+                                                    required
+                                                    ng-options="resp.EmpNo as resp.EmpName for resp in le.ResponsableNumbers">
+                                                <option value="">@Common.Select</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-md-5 mt-1" ng-show="le.leaverules.attachreq==1" desc="attach">
+                                        <div class="form-group">
+                                            <attachment-comp ng-model="le.formdata.Attached" title="@Common.Attachment" size="400kB"
+                                                             error-message="@Common.AttachmentValidation"
+                                                             show-required="true" type="'.pdf, .png, .jpg , .jpeg'"
+                                                             valide="le.formValidation.isValidAttachment"></attachment-comp>
+                                            <label class="label-warning" ng-bind="le.leaverules.attachlabel"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-5 date mt-1" ng-show="le.leaverules.relatedreq==1" desc="reldate">
+                                        <div class="form-group">
+                                            <label>
+                                                @Common.RelatedDate
+                                            </label>
+                                            <div class="input-group input-append date" id="datePickerRelatedDateContainer">
+                                                <input type="text" class="form-control" name="date" id="ReleatedDatePicker" readonly ng-model="le.otherData.relatedDate" />
+                                                <span class="input-group-addon add-on"><span class="glyphicon glyphicon-calendar"></span></span>
+                                            </div>
+                                            <p style="color:#e61818; margin-left:5px; margin-right:5px">{{le.otherData.relatedDateHijriFormat}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2 class="dotted-title green">@Common.Balance</h2>
+                                <div class="row">
+
+                                    <div class="col-12 col-lg-3 mt-1" ng-show="le.leaverules.maxVisable">
+                                        <div class="form-group">
+                                            <label>
+                                                @Common.LeaveMinDays
+                                            </label>
+                                            <input type="text" class="form-control" readonly disabled id="MinBalance" ng-model="le.leaverules.min"  style="width:50%" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-3 mt-1" ng-show="le.leaverules.minVisable">
+                                        <div class="form-group">
+                                            <label>
+                                                @Common.LeaveMaxDays
+                                            </label>
+                                            <input type="text" class="form-control" readonly disabled id="MaxBalance" ng-model="le.leaverules.max"  style="width:50%" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-3 mt-1">
+                                        <div class="form-group">
+                                            <label>
+                                                @Common.LeaveBalanceAvailable
+                                            </label>
+                                            <input type="text" class="form-control" readonly disabled id="BalanceAvailable" ng-model="le.leaverules.available"  style="width:50%" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12 col-lg-3 mt-1">
+                                        <div class="form-group">
+                                            <label>
+                                                @Common.LeaveBalanceConsumed
+                                            </label>
+                                            <input type="text" class="form-control" readonly disabled id="BalanceConsumed" ng-model="le.leaverules.consumed" style="width:50%" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-left mt-1">
+                                    <button type="submit"
+                                            ng-click="le.CreateRequest(aspnetForm.$valid)"
+                                            id="btnCreateRequest"
+                                            ng-disabled="!le.formValidation.isValidEmpInfo"
+                                            class="btn btn-success submit-btn ml-30" style="font-weight:bold">
+                                        
+                                        @Common.Submit
+                                    </button>
+                                    <a href="~/EServices/Index" class="btn btn-gray back-btn">
+                                        @Common.Back
+                                    </a>
+                                </div>
+                                <script>
+                                    $(document).ready(function () {
+                                       UserFavoritesIsExist('@SiteStaticHelper.GetServiceId(ServicesEnum.Vacation)');
+                                    });
+                                    $('#datePickerFromContainer')
+                                        .datepicker({
+                                            format: 'yyyy/mm/dd',
+                                            language: 'ar',
+                                            setDate: new Date(),
+                                            autoclose: true
+                                        }).on('changeDate', function (e) {
+                                            // Revalidate the date field
+                                            var scope = angular.element(document.getElementById('idForJS')).scope();
+                                            scope.OnSelectedFromDateChange($("#fromDatePicker").val());
+                                        });
+                                    $('#datePickerToContainer')
+                                        .datepicker({
+                                            format: 'yyyy/mm/dd',
+                                            language: 'ar',
+                                            setStartDate: new Date(),
+                                            autoclose: true,
+                                        }).on('changeDate', function (e) {
+                                            var scope = angular.element(document.getElementById('idForJS')).scope();
+                                            scope.OnSelectedToDateChange($("#toDatePicker").val());
+                                        });
+                                    $('#datePickerRelatedDateContainer')
+                                        .datepicker({
+                                            format: 'yyyy/mm/dd',
+                                            language: 'ar',
+                                            setStartDate: new Date(),
+                                            autoclose: true,
+                                        }).on('changeDate', function (e) {
+                                            var scope = angular.element(document.getElementById('idForJS')).scope();
+                                            scope.OnSelectedReleatedDateChange($("#ReleatedDatePicker").val());
+                                        });
+
+                                </script>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="my-orders" role="tabpanel" aria-labelledby="my-orders-tab">
+                        <div class="form-group" ng-show="(le.MyLeaveRequests.length == 0)">
+                            <div class="col-sm-12" style="text-align:center; font-size:18px">
+                                @Common.NoRequests
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped inner-table mt-40">
+                                <thead ng-show="(le.MyLeaveRequests.length > 0)">
+                                    <tr>
+                                        <th style="width:15%">@Common.RequestNo</th>
+                                        <th style="width:45%">@Common.RequestStatus</th>
+                                        <th style="width:25%">@Common.CreatedDate</th>
+                                        <th style="width:15%">@Common.ViewRequest</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="repetData">
+                                    <tr ng-repeat="myRequest in le.MyLeaveRequests">
+                                        <td class="">{{myRequest.AppCode}}</td>
+                                        <td class="">{{myRequest.AppStatusDescription}}</td>
+                                        <td class="">{{myRequest.GregorianAppDate | date:'dd/MM/yyyy'}}</td>
+                                        <td class="">
+                                            <button type="button" ng-click="le.getMyRequestByAppCode($index)" class="view-offer" data-toggle='modal' data-target='#myModal'>
+                                                @Common.ViewRequest
+                                                <img src="~/App_Themes/Site/assets/images/search-icon.svg" alt="">
+                                            </button>
+
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="my-tasks" role="tabpanel" aria-labelledby="my-tasks-tab">
+                        <div class="form-group" ng-show="(le.MyLeaveTasks.length == 0)">
+                            <div class="col-sm-12" style="text-align:center; font-size:18px">
+                                @Common.NoTasks
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped inner-table mt-40">
+                                <thead ng-show="(le.MyLeaveTasks.length > 0)">
+                                    <tr>
+                                        <th style="width:15%">@Common.RequestNo</th>
+                                        <th style="width:45%">@Common.RequestStatus</th>
+                                        <th style="width:25%">@Common.CreatedDate</th>
+                                        <th style="width:15%">@Common.ViewRequest</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="repetData">
+                                    <tr ng-repeat="myTask in le.MyLeaveTasks">
+                                        <td class="">{{myTask.AppCode}}</td>
+                                        <td class="">{{myTask.AppStatusDescription}}</td>
+                                        <td class="">{{myTask.GregorianAppDate | date:'dd/MM/yyyy'}}</td>
+                                        <td class="">
+                                            <button type="button" ng-click="le.getMyTaskByAppCode($index)" class="view-offer">
+                                                @Common.ViewRequest
+                                                <img src="~/App_Themes/Site/assets/images/search-icon.svg" alt="">
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Html.Action("GetOtherEServices")
+    <!-- end here  -->
+</div>
+<br />

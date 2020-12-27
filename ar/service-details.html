@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- fontawesome5 -->
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <!-- swiper css -->
+  
+  <!-- select 2 css -->
+  <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
+  <!-- datepicker -->
+  <link rel="stylesheet" href="../node_modules/bootstrap-datepicker/dist/css/bootstrap-datepicker.standalone.min.css">
+  <!-- custom -->
+  <link rel="stylesheet" href="../assets/css/styles-rtl.min.css">
+</head>
+
+<body>
+  <div class="top-bar">
+    <div class="container">
+      <div class="user-info">
+        <img src="../assets/images/profile-icon.svg" alt="profile-icon">
+        <div class="dropdown show">
+          <a class="dropdown-toggle" href="javascript:;" role="button" id="user-info-list" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            رائد حسين الشباطات
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="user-info-list">
+            <a class="dropdown-item" href="javascript:;">معلومات الحساب</a>
+            <a class="dropdown-item" href="javascript:;">خدماتي</a>
+            <a class="dropdown-item danger" href="javascript:;">تسجيل الخروج</a>
+          </div>
+        </div>
+      </div>
+      <div class="today-date">
+        <span class="hijri">
+          الثلاثاء 17 شوال 1441 هـ
+        </span>
+        &nbsp;
+        -
+        &nbsp;
+        <span class="gregorian">
+          11 يونيو 2020 م
+        </span>
+      </div>
+      <ul class="time-weather-list">
+        <li>
+          <i class="far fa-clock"></i>
+          ٢:٣٥م
+        </li>
+        <li>
+          <img src="../assets/images/cloud-icon.svg" alt="" srcset="">
+          o
+          16
+        </li>
+        <li>
+          <i class="fas fa-mosque"></i>
+          العصر : 2:45 م
+        </li>
+      </ul>
+      <div class="search-btn">
+        <a href="javascript:;" id="s-btn">
+          <img src="../assets/images/search-icon.svg" alt="" srcset="">
+        </a>
+        <div class="search-box">
+          <input type="text" class="form-control no-outline" placeholder="إبحث في الموقع ... " />
+          <a href="javascript:;" class="search-submit-btn" title="بحث">
+            <i class="fas fa-search"></i></a>
+          <a href="javascript:;" class="close-search-btn" title="اغلاق">
+            <i class="fas fa-times"></i></a>
+        </div>
+      </div>
+      <a href="javascript:;" class="lang">
+        English
+      </a>
+      <div class="dropdown show notification">
+        <a href="javascript:;" role="button" id="notification-btn" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <i class="far fa-bell"></i>
+          <span class="count">3</span>
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="notification-btn">
+          <a class="dropdown-item" href="javascript:;">Action</a>
+          <a class="dropdown-item" href="javascript:;">Another action</a>
+          <a class="dropdown-item" href="javascript:;">Something else here</a>
+        </div>
+      </div>
+      <a href="javascript:;" class="link float-left">
+        <img src="../assets/images/mai-icon.svg" alt="" srcset="">
+        البريد الإلكتروني</a>
+      <a href="javascript:;" class="link float-left">
+        <img src="../assets/images/support-icon.svg" alt="" srcset="">
+        الدعم الفني</a>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <!-- start NavBar -->
+  <nav class="navbar navbar-expand-lg main-nav">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="../assets/images/logo.svg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="main_nav">
+
+        <ul class="navbar-nav">
+          <li class="nav-item active"> <a class="nav-link" href="#">
+              <img src="../assets/images/bx-home-alt.svg" alt="">
+
+              الرئيسية </a> </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> الخدمات الإلكترونية </a>
+            <ul class="dropdown-menu fade-up">
+              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> الإدارات</a>
+            <ul class="dropdown-menu fade-up">
+              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> التعاميم</a>
+            <ul class="dropdown-menu fade-up">
+              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="#"> مكتبة المستندات </a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> المركز الاعلامي </a>
+            <ul class="dropdown-menu fade-up">
+              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div> <!-- navbar-collapse.// -->
+    </div>
+
+  </nav>
+  <section class="content">
+    <div class="container">
+
+      <div class="row">
+        <div class="col fav-wrapper">
+          <div class="user-info-card">
+            <div class="img-box">
+              <img src="../assets/images/profile-img.png" alt="" srcset="">
+            </div>
+            <h2>رائد حسين الشباطات</h2>
+            <ul>
+              <li>
+                <img src="../assets/images/account-settings-icon.svg" alt="" srcset="">
+                <span>مطور</span>
+              </li>
+              <li>
+                <img src="../assets/images/settings-outline-icon.svg" alt="" srcset="">
+                <span>تقنية المعلومات</span>
+              </li>
+              <li>
+                <img src="../assets/images/mail-light-icon.svg" alt="" srcset="">
+                <span>
+                  <a href="mailto: r.shabatat.v@saso.gov.sa">r.shabatat.v@saso.gov.sa</a>
+                </span>
+              </li>
+              <li>
+                <img src="../assets/images/location-icon.svg" alt="" srcset="">
+                <span>
+                  الرياض
+                </span>
+              </li>
+              <li>
+                <img src="../assets/images/phone-icon.svg" alt="" srcset="">
+                <span>
+                  9823
+                </span>
+              </li>
+              <li>
+                <img src="../assets/images/user-o-icon.svg" alt="" srcset="">
+                <span>
+                  <h4>مدير القسم</h4>
+                  عبدالكريم ناصر العضياني
+                </span>
+              </li>
+              <li>
+                <img src="../assets/images/serv-icon.svg" alt="" srcset="">
+                <span>
+                  <a href="javascript:;">
+                    المزيد
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="fav-card">
+            <h4 class="title">
+              <i class="far fa-star"></i>
+              المفضلة
+
+            </h4>
+            <ul id="fav-list">
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/serv-sm-icon.svg" alt="" srcset="">
+                  خدمة طلب اجازة
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/calender-sm-icon.svg" alt="" srcset="">
+                  كشف الحضور والانصراف
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/desk-sm-icon.svg" alt="" srcset="">
+                  طلب خارج الدوام
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/car-fix-sm-icon.svg" alt="" srcset="">
+                  خدمة صيانة سيارة
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/serv-icon-dark.svg" alt="" srcset="">
+                  المزيد
+                </a>
+              </li>
+            </ul>
+            <button id="fav-toggle" type="button">
+              <i class="fas fa-chevron-up"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col" id="fav-other-side">
+          <!-- start here -->
+          <section class="inner-page-header">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="javascript:;">الرئيسية</a>
+                </li>
+                <li class="breadcrumb-item" aria-current="page">الخدمات الإلكترونية</li>
+              </ol>
+            </nav>
+            <h1>طلب اجازة</h1>
+          </section>
+
+          <div class="inner-card mt-40">
+            <nav class="float-right">
+              <div class="nav nav-pills" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="new-order-tab" data-toggle="tab" href="#new-order" role="tab"
+                  aria-controls="new-order" aria-selected="true">طلب جديد</a>
+                <a class="nav-item nav-link" id="my-orders-tab" data-toggle="tab" href="#my-orders" role="tab"
+                  aria-controls="my-orders" aria-selected="false">طلباتي</a>
+                <a class="nav-item nav-link" id="my-tasks-tab" data-toggle="tab" href="#my-tasks" role="tab"
+                  aria-controls="my-tasks" aria-selected="false">مهامي</a>
+              </div>
+            </nav>
+            <button id="addToFav" type="button">
+              <i class="far fa-star"></i>
+              أضف للمفضلة</button>
+              <div class="clearfix"></div>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="new-order" role="tabpanel" aria-labelledby="new-order-tab">
+                <h2 class="dotted-title green">معلومات الطلب</h2>
+                <form>
+                  <div class="row">
+                    <div class="col-12 col-lg-6 mt-30">
+                      <div class="form-group">
+                        <label for="select-1 " class="required">نوع الإجازة رئيسي</label>
+                        <select class="custom-select" name="main-vacation" id="select-1">
+                          <option value="">نوع الإجازة رئيسي</option>
+                          <option value="AL">الحائل</option>
+                          <option value="WY">الشرقية</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6 mt-30">
+                      <div class="form-group">
+                        <label for="select-2 " class="required">نوع الإجازة الفرعي</label>
+                        <select class="custom-select" name="sub-vacation" id="select-2">
+                          <option value=""> نوع الإجازة الفرعي</option>
+                          <option value="AL">الحائل</option>
+                          <option value="WY">الشرقية</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6 mt-30">
+                      <div class="form-group">
+                        <label for="start-date" class="required">تاريخ البداية</label>
+                        <div class="date-wrapper">
+                          <input type="text" class="form-control custom-form-control date-inline" id="start-date"
+                            placeholder="حدد تاريخ البداية" data-date-format="mm/dd/yyyy">
+                          <span class="date-toggle"><img src="../assets/images/date-toggle-icon.svg" alt=""></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-lg-6 mt-30">
+                      <div class="form-group">
+                        <label for="end-date " class="required">تاريخ النهاية</label>
+                        <div class="date-wrapper">
+                          <input type="text" class="form-control custom-form-control date-inline" id="end-date"
+                            placeholder="حدد تاريخ النهاية" data-date-format="mm/dd/yyyy">
+                          <span class="date-toggle"><img src="../assets/images/date-toggle-icon.svg" alt=""></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-left mt-30">
+                    <button type="submit" class="btn btn-success submit-btn ml-30">
+                      إرسال
+                    </button>
+                    <button type="button" class="btn btn-gray back-btn">
+                      عودة
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="tab-pane fade" id="my-orders" role="tabpanel" aria-labelledby="my-orders-tab">
+                <div class="table-responsive">
+                  <table class="table table-striped inner-table mt-40">
+                    <thead>
+                      <tr>
+                        <th scope="col">رقم الطلب</th>
+                        <th scope="col">
+                          حالة الطلب
+                        </th>
+                        <th scope="col">تاريخ الإنشاء</th>
+                        <th scope="col">
+                          عرض الطلب
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                     <tr>
+                       <td>38</td>
+                       <td>رفض الطلب</td>
+                       <td>‏25 سبتمبر 2020</td>
+                       <td>
+                         <a href="javascript:;" class="view-offer">
+                          عرض الطلب
+                          <img src="../assets/images/search-icon.svg" alt="">
+                         </a>
+                       </td>
+                     </tr>
+                     <tr>
+                      <td>28</td>
+                      <td>تقديم طلب وبانتظار موافقة باسل يوسف شفيق العطي</td>
+                      <td>‏20 سبتمبر 2020</td>
+                      <td>
+                        <a href="javascript:;" class="view-offer">
+                         عرض الطلب
+                         <img src="../assets/images/search-icon.svg" alt="">
+                        </a>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>25</td>
+                      <td>نص داخل جدول  -  نص داخل جدول </td>
+                      <td>‏25 سبتمبر 2020</td>
+                      <td>
+                        <a href="javascript:;" class="view-offer">
+                         عرض الطلب
+                         <img src="../assets/images/search-icon.svg" alt="">
+                        </a>
+                      </td>
+                    </tr>
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="my-tasks" role="tabpanel" aria-labelledby="my-tasks-tab"></div>
+            </div>
+          </div>
+          <h2 class="dotted-title gray mt-70">خدمات أخرى</h2>
+          <div class="row mt-30">
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="service-box">
+                <img src="../assets/images/serv-plane-icon.svg" alt="" srcset="">
+                <h4>طلب اجازة</h4>
+                <button type="button">إبدأ الخدمة</button>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="service-box">
+                <img src="../assets/images/serv-desk-icon.svg" alt="" srcset="">
+                <h4>طلب خارج الدوام</h4>
+                <button type="button">إبدأ الخدمة</button>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="service-box">
+                <img src="../assets/images/serv-headphone-icon.svg" alt="" srcset="">
+                <h4>طلب خدمة انتداب</h4>
+                <button type="button">إبدأ الخدمة</button>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3">
+              <div class="service-box">
+                <img src="../assets/images/serv-calendar-icon.svg" alt="" srcset="">
+                <h4>كشف الحضور والانصراف</h4>
+                <button type="button">إبدأ الخدمة</button>
+              </div>
+            </div>
+          </div>
+          <!-- end here  -->
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="copy float-right">
+        جميع الحقوق محفوظة للهيئة السعودية للمواصفات والمقاييس والجودة © 2020
+      </div>
+      <div class="logos float-left">
+        <img src="../assets/images/saso-logo.svg" alt="">
+        <img src="../assets/images/vision-logo.svg" alt="">
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </footer>
+  <!-- jQuery -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- datepicker -->
+  <script src="../node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+  <!-- swiper -->
+
+  <!-- select 2 -->
+  <script src="../node_modules/select2/dist/js/select2.full.min.js"></script>
+  <!-- inline -->
+  <!-- custom Js -->
+  <script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>

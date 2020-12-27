@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="29.191" viewBox="0 0 32 29.191">
+  <g id="calender-sm-icon" transform="translate(0.265)">
+    <rect id="icon-base" width="32" height="29" transform="translate(-0.265 0.191)" fill="none"/>
+    <g id="Group_2333" data-name="Group 2333" transform="translate(1.466)">
+      <g id="Group_2333-2" data-name="Group 2333">
+        <g id="Group_2352" data-name="Group 2352">
+          <path id="Path_6121" data-name="Path 6121" d="M329.658,322.507a6.969,6.969,0,0,0-5.456-6.765,7.172,7.172,0,0,0-1.591-.18c-.153,0-.3.006-.455.016a7,7,0,0,0-6.547,6.145,6.808,6.808,0,0,0,.11,2.24,7.058,7.058,0,0,0,13.938-1.456ZM322.61,327.1a4.593,4.593,0,1,1,4.66-4.593A4.627,4.627,0,0,1,322.61,327.1Z" transform="translate(-300.559 -300.776)" fill="#0096b6"/>
+          <path id="Path_6123" data-name="Path 6123" d="M94.031,0a.791.791,0,0,0-.8.784v3.7a.791.791,0,0,0,.8.784h.682a.791.791,0,0,0,.8-.784V.784a.791.791,0,0,0-.8-.784Z" transform="translate(-88.802)" fill="#0096b6"/>
+          <path id="Path_6124" data-name="Path 6124" d="M357,0a.791.791,0,0,0-.8.784v3.7a.791.791,0,0,0,.8.784h.682a.791.791,0,0,0,.8-.784V.784a.791.791,0,0,0-.8-.784Z" transform="translate(-339.268)" fill="#0096b6"/>
+          <path id="Path_6125" data-name="Path 6125" d="M1.819,75.6H13.072a8.394,8.394,0,0,1-.17-1.68c0-.188.008-.375.021-.56H3.41a1.354,1.354,0,0,1-1.364-1.344V61.257H21.6v4.157c.15-.008.3-.012.455-.012a8.764,8.764,0,0,1,1.591.147V56.776a1.806,1.806,0,0,0-1.819-1.792H20.346v1.9a1.921,1.921,0,0,1-1.932,1.9h-.682a1.921,1.921,0,0,1-1.932-1.9v-1.9H7.843v1.9a1.921,1.921,0,0,1-1.932,1.9H5.229a1.921,1.921,0,0,1-1.932-1.9v-1.9H1.819A1.806,1.806,0,0,0,0,56.776V73.8A1.806,1.806,0,0,0,1.819,75.6Z" transform="translate(0 -52.408)" fill="#0096b6"/>
+        </g>
+        <g id="Group_2334" data-name="Group 2334" transform="translate(4.718 10.431)">
+          <g id="Group_2351" data-name="Group 2351">
+            <path id="Path_6122" data-name="Path 6122" d="M400.877,396.844h-1.568v2.464h-2.464v1.568h4.033v-1.568h0Z" transform="translate(-382.786 -388.68)" fill="rgba(0,150,182,0.4)"/>
+            <circle id="Ellipse_78" data-name="Ellipse 78" cx="1.778" cy="1.778" r="1.778" fill="rgba(0,150,182,0.4)"/>
+            <circle id="Ellipse_79" data-name="Ellipse 79" cx="1.778" cy="1.778" r="1.778" transform="translate(5.335)" fill="rgba(0,150,182,0.4)"/>
+            <circle id="Ellipse_80" data-name="Ellipse 80" cx="1.778" cy="1.778" r="1.778" transform="translate(10.669)" fill="rgba(0,150,182,0.4)"/>
+            <circle id="Ellipse_81" data-name="Ellipse 81" cx="1.778" cy="1.778" r="1.778" transform="translate(5.335 5.377)" fill="rgba(0,150,182,0.4)"/>
+            <circle id="Ellipse_82" data-name="Ellipse 82" cx="1.778" cy="1.778" r="1.778" transform="translate(0 5.377)" fill="rgba(0,150,182,0.4)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

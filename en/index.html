@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- fontawesome5 -->
+  <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <!-- swiper css -->
+  <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+  <!-- select 2 css -->
+  <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
+  <!-- custom -->
+  <link rel="stylesheet" href="../assets/css/styles-ltr.min.css">
+</head>
+
+<body>
+  <div class="top-bar">
+    <div class="container">
+      <div class="user-info">
+        <img src="../assets/images/profile-icon.svg" alt="profile-icon">
+        <div class="dropdown show">
+          <a class="dropdown-toggle" href="javascript:;" role="button" id="user-info-list" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Raed Hussein Al-Shbatat
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="user-info-list">
+            <a class="dropdown-item" href="javascript:;">Account Information</a>
+            <a class="dropdown-item" href="javascript:;">Services</a>
+            <a class="dropdown-item danger" href="javascript:;">sign out</a>
+          </div>
+        </div>
+      </div>
+      <div class="today-date">
+        <span class="hijri">
+          Tuesday 17 Shawwal 1441 AH
+        </span>
+        &nbsp;
+        -
+        &nbsp;
+        <span class="gregorian">
+          11 June 2020
+        </span>
+      </div>
+      <ul class="time-weather-list">
+        <li>
+          <i class="far fa-clock"></i>
+          2:35 pm
+        </li>
+        <li>
+          <img src="../assets/images/cloud-icon.svg" alt="" srcset="">
+          o
+          16
+        </li>
+        <li>
+          <i class="fas fa-mosque"></i>
+          Afternoon: 2:45 pm
+        </li>
+      </ul>
+      <div class="search-btn">
+        <a href="javascript:;" id="s-btn">
+          <img src="../assets/images/search-icon.svg" alt="" srcset="">
+        </a>
+        <div class="search-box">
+          <input type="text" class="form-control no-outline" placeholder="Search the site ... " />
+          <a href="javascript:;" class="search-submit-btn" title="Search">
+            <i class="fas fa-search"></i></a>
+          <a href="javascript:;" class="close-search-btn" title="Close">
+            <i class="fas fa-times"></i></a>
+        </div>
+      </div>
+      <a href="javascript:;" class="lang">
+        English
+      </a>
+      <div class="dropdown show notification">
+        <a href="javascript:;" role="button" id="notification-btn" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <i class="far fa-bell"></i>
+          <span class="count">3</span>
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="notification-btn">
+          <a class="dropdown-item" href="javascript:;">Action</a>
+          <a class="dropdown-item" href="javascript:;">Another action</a>
+          <a class="dropdown-item" href="javascript:;">Something else here</a>
+        </div>
+      </div>
+      <a href="javascript:;" class="link float-left">
+        <img src="../assets/images/mai-icon.svg" alt="" srcset="">
+        E-mail</a>
+      <a href="javascript:;" class="link float-left">
+        <img src="../assets/images/support-icon.svg" alt="" srcset="">
+        Technical support</a>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+
+  <!-- start NavBar -->
+  <nav class="navbar navbar-expand-lg main-nav">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="../assets/images/logo.svg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="main_nav">
+
+        <ul class="navbar-nav">
+          <li class="nav-item active"> <a class="nav-link" href="#">
+              <img src="../assets/images/bx-home-alt.svg" alt="">
+
+              Main </a> </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> electronic services </a>
+            <ul class="dropdown-menu fade-up">
+              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Departments</a>
+            <ul class="dropdown-menu fade-up">
+              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Circulars</a>
+            <ul class="dropdown-menu fade-up">
+              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link" href="#"> Document library </a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link  dropdown-toggle" href="#" data-toggle="dropdown"> Media Center </a>
+            <ul class="dropdown-menu fade-up">
+              <li><a class="dropdown-item" href="#"> Submenu item 1</a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 2 </a></li>
+              <li><a class="dropdown-item" href="#"> Submenu item 3 </a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div> <!-- navbar-collapse.// -->
+    </div>
+
+  </nav>
+  <!-- end NavBar -->
+  <section class="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md user-info-wrapper">
+          <div class="user-info-card">
+            <button type="button" id="info-card-toggle" data-toggle="tooltip" data-placement="right"
+              title="Minimize the list"  class="d-none d-md-block"><img src="../assets/images/bx-menu-alt-right.svg" alt=""></button>
+            <div class="img-box">
+              <img src="../assets/images/profile-img.png" alt="" srcset="">
+            </div>
+            <!-- <h2>Raed Hussein Al-Shbatat</h2> -->
+            <div class="headers-for-xs">
+              <h2 class="job-title d-block d-md-none">the direct boss</h2>
+              <h2>Raed Hussein Al-Shbatat</h2>
+            </div>
+            <ul class="d-none d-md-block">
+              <li>
+                <img src="../assets/images/account-settings-icon.svg" alt="" srcset="">
+                <span>Developer</span>
+              </li>
+              <li>
+                <img src="../assets/images/settings-outline-icon.svg" alt="" srcset="">
+                <span>information technology</span>
+              </li>
+              <li>
+                <img src="../assets/images/mail-light-icon.svg" alt="" srcset="">
+                <span>
+                  <a href="mailto: r.shabatat.v@saso.gov.sa">r.shabatat.v@saso.gov.sa</a>
+                </span>
+              </li>
+              <li>
+                <img src="../assets/images/location-icon.svg" alt="" srcset="">
+                <span>
+                  Riyadh
+                </span>
+              </li>
+              <li>
+                <img src="../assets/images/phone-icon.svg" alt="" srcset="">
+                <span>
+                  9823
+                </span>
+              </li>
+              <li>
+                <img src="../assets/images/user-o-icon.svg" alt="" srcset="">
+                <span>
+                  <h4>Section Manager</h4>
+                  Abdul Karim Nasser Al-Idyani
+                </span>
+              </li>
+              <li>
+                <img src="../assets/images/serv-icon.svg" alt="" srcset="">
+                <span>
+                  <a href="javascript:;">
+                    More
+                  </a>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="col-12 col-md" id="user-info-other-side">
+          <div class="row">
+            <div class="col-12 col-lg-6 col-xl-3 mb-30">
+              <div class="dash-cards">
+                <span class="count blue">04</span>
+                <div class="type">
+                  <img src="../assets/images/tasks-icon.svg" alt="">
+                  My duties
+                </div>
+                <div class="status">
+                  Updated 1 hour 32 minutes ago
+                </div>
+                <a href="javascript:;" class="stretched-link"></a>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-3 mb-30">
+              <div class="dash-cards">
+                <span class="count gray">02</span>
+                <div class="type">
+                  <img src="../assets/images/orders-icon.svg" alt="">
+                  My requests
+                </div>
+                <div class="status">
+                  Updated 1 hour 32 minutes ago
+                </div>
+                <a href="javascript:;" class="stretched-link"></a>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-3 mb-30">
+              <div class="dash-cards">
+                <span class="count green">25</span>
+                <div class="type">
+                  <img src="../assets/images/holidays-icon.svg" alt="">
+                  My vacation credit
+                </div>
+                <div class="status">
+                  Updated 1 hour 32 minutes ago
+                </div>
+                <a href="javascript:;" class="stretched-link"></a>
+              </div>
+            </div>
+            <div class="col-12 col-lg-6 col-xl-3 mb-30">
+              <div class="dash-cards">
+                <span class="count orange">35</span>
+                <div class="type">
+                  <img src="../assets/images/table-clock-icon.svg" alt="">
+                  Number of minutes delay
+                </div>
+                <div class="status">
+                  Updated 1 hour 32 minutes ago
+                </div>
+                <a href="javascript:;" class="stretched-link"></a>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-container main-slider">
+            <div class="title">
+              <img src="../assets/images/title-bg.svg" alt="">
+              The latest decisions
+            </div>
+            <!-- Additional required wrapper -->
+            <div class="owl-carousel">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col-xl-7">
+                    <div class="noti-item">
+                      <div class="icon bell"></div>
+                      <div class="data">
+                        <h3>Determine the percentage of employees' attendance at 100%, starting from 08/30/2020</h3>
+                        <p>August 25, 2020</p>
+                        <span>Human Resource Management</span>
+                      </div>
+                      <a href="javascript:;" class="stretched-link"></a>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="noti-item">
+                      <div class="icon bell"></div>
+                      <div class="data">
+                        <h3>Update the employees' practical experiences, knowing that the service is available for a week only</h3>
+                        <p>August 25, 2020</p>
+                        <span>Human Resource Management</span>
+
+                      </div>
+                      <a href="javascript:;" class="stretched-link"></a>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div class="col-xl-5">
+                    <div class="img-box">
+                      <img src="../assets/images/slide-bg.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col-xl-7">
+                    <div class="noti-item">
+                      <div class="icon bell"></div>
+                      <div class="data">
+                        <h3>Determine the percentage of employees' attendance at 100%, starting from 08/30/2020</h3>
+                        <p>August 25, 2020</p>
+                        <span>Human Resource Management</span>
+                      </div>
+                      <a href="javascript:;" class="stretched-link"></a>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="noti-item">
+                      <div class="icon bell"></div>
+                      <div class="data">
+                        <h3>Update the employees' practical experiences, knowing that the service is available for a week only</h3>
+                        <p>August 25, 2020</p>
+                        <span>Human Resource Management</span>
+
+                      </div>
+                      <a href="javascript:;" class="stretched-link"></a>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div class="col-xl-5">
+                    <div class="img-box">
+                      <img src="../assets/images/slide-bg.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="row">
+                  <div class="col-xl-7">
+                    <div class="noti-item">
+                      <div class="icon bell"></div>
+                      <div class="data">
+                        <h3>Determine the percentage of employees' attendance at 100%, starting from 08/30/2020</h3>
+                        <p>August 25, 2020</p>
+                        <span>Human Resource Management</span>
+                      </div>
+                      <a href="javascript:;" class="stretched-link"></a>
+                      <div class="clearfix"></div>
+                    </div>
+                    <div class="noti-item">
+                      <div class="icon bell"></div>
+                      <div class="data">
+                        <h3>Update the employees' practical experiences, knowing that the service is available for a week only</h3>
+                        <p>August 25, 2020</p>
+                        <span>Human Resource Management</span>
+
+                      </div>
+                      <a href="javascript:;" class="stretched-link"></a>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                  <div class="col-xl-5">
+                    <div class="img-box">
+                      <img src="../assets/images/slide-bg.svg" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-left">
+              <a href="javascript:;" class="all-btn gray">
+                All circulars
+                <span class="icon"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md fav-wrapper d-none d-md-block">
+          <div class="fav-card">
+            <h4 class="title">
+              <i class="far fa-star"></i>
+              Favorite
+
+            </h4>
+            <ul id="fav-list">
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/serv-sm-icon.svg" alt="" srcset="">
+                  Leave request service
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/calender-sm-icon.svg" alt="" srcset="">
+                  Attendance and departure detection
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/desk-sm-icon.svg" alt="" srcset="">
+                  Request out of hours
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/car-fix-sm-icon.svg" alt="" srcset="">
+                  Car maintenance service
+                </a>
+              </li>
+              <li>
+                <a href="javascript:;">
+                  <img src="../assets/images/serv-icon-dark.svg" alt="" srcset="">
+                  More
+                </a>
+              </li>
+            </ul>
+            <button id="fav-toggle" type="button">
+              <i class="fas fa-chevron-up"></i>
+            </button>
+          </div>
+        </div>
+        <div class="col-12 col-md" id="fav-other-side">
+          <div class="row mt-40">
+            <div class="col-12 col-xl-7">
+              <div class="inner-title lg-line">
+                Society Authority
+              </div>
+              <div class="swiper-container news-slider" >
+
+                <!-- Additional required wrapper -->
+                <div class="owl-carousel">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <div class="img-box">
+                      <img src="../assets/images/news-slide-bg.png" alt="">
+                    </div>
+                    <div class="content-box">
+                      <h3>In the presence of His Excellency the Governor, the Commission celebrates the achievement of (73) tests for international accreditation</h3>
+                      <cite class="date">
+                        <img src="../assets/images/calender-icon.svg" alt="">
+                        Monday 15 June 2020</cite>
+                      <p>Lorem Ipsum is a virtual template that is placed in designs to be shown to the client to visualize how to place texts
+                        Designs, whether printed designs, brochure </p>
+                    </div>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img-box">
+                      <img src="../assets/images/news-slide-bg.png" alt="">
+                    </div>
+                    <div class="content-box">
+                      <h3>In the presence of His Excellency the Governor, the Commission celebrates the achievement of (73) tests for international accreditation</h3>
+                      <cite class="date">
+                        <img src="../assets/images/calender-icon.svg" alt="">
+                        Monday 15 June 2020</cite>
+                      <p>Lorem Ipsum is a virtual template that is placed in designs to be shown to the client to visualize how to place texts
+                        Designs, whether printed designs, brochure </p>
+                    </div>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="img-box">
+                      <img src="../assets/images/news-slide-bg.png" alt="">
+                    </div>
+                    <div class="content-box">
+                      <h3>In the presence of His Excellency the Governor, the Commission celebrates the achievement of (73) tests for international accreditation</h3>
+                      <cite class="date">
+                        <img src="../assets/images/calender-icon.svg" alt="">
+                        Monday 15 June 2020</cite>
+                      <p>Lorem Ipsum is a virtual template that is placed in designs to be shown to the client to visualize how to place texts
+                        Designs, whether printed designs, brochure </p>
+                    </div>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div class="text-left">
+                  <a href="javascript:;" class="all-btn gray">
+                    All news
+                    <span class="icon"></span>
+                  </a>
+                </div>
+
+            
+
+              </div>
+            </div>
+            <div class="col-12 col-xl-5">
+              <div class="inner-title">
+                Regulations, guides and policies
+              </div>
+              <div class="default-card proof-list">
+                <ul>
+                  <li>
+                    <div class="img-box">
+                      <img src="../assets/images/Stamp-Contract-Certification-Document-Business.svg" alt="">
+                    </div>
+                    <div class="data">
+                      <h3>Lorem Ipsum is a virtual template that is placed in designs to be shown to the client to visualize how to place texts
+                        With designs </h3>
+                      <p>August 25, 2020</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </li>
+                  <li>
+                    <div class="img-box">
+                      <img src="../assets/images/Stamp-Contract-Certification-Document-Business.svg" alt="">
+                    </div>
+                    <div class="data">
+                      <h3>Lorem Ipsum is a virtual template that is placed in designs to be shown to the client to visualize how to place texts
+                        With designs </h3>
+                      <p>August 25, 2020</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </li>
+                  <li>
+                    <div class="img-box">
+                      <img src="../assets/images/Stamp-Contract-Certification-Document-Business.svg" alt="">
+                    </div>
+                    <div class="data">
+                      <h3>Lorem Ipsum is a virtual template that is placed in designs to be shown to the client to visualize how to place texts
+                        With designs </h3>
+                      <p>August 25, 2020</p>
+                    </div>
+                    <div class="clearfix"></div>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </li>
+                </ul>
+                <div class="text-left">
+                  <a href="javascript:;" class="all-btn gray">
+                    Show more
+                    <span class="icon"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-40">
+            <div class="col-12 col-xl-6 ">
+              <div class="inner-title ">
+                Staff directory
+              </div>
+              <div class="default-card guide">
+                <form>
+
+                  <select class="custom-select" name="state">
+                    <option value=""> Please select the administration</option>
+                    <option value="AL">Hail</option>
+                    <option value="WY">Eastern</option>
+                  </select>
+
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Search for the name">
+                  </div>
+                  <div class="text-left" style="margin-bottom: 0;">
+                    <a class="em-label" href="javascript:;">
+                      <i class="far fa-address-book"></i>
+                      Staff directory
+                    </a>
+                    <button type="submit" class="btn btn-success submit-btn">
+                      Search
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-xl-6">
+              <div class="inner-title ">
+                We shared the opinion
+              </div>
+              <div class="default-card poll" id="votePoll">
+                <h5>What service do you need and would like to be present in the internal portal of the authority?</h5>
+                <form>
+                  <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="poll" id="exampleRadios1" value="1" checked>
+                    <label class="custom-control-label" for="exampleRadios1">
+                      Lorem Ipsum is a model
+                    </label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="poll" id="exampleRadios2" value="2">
+                    <label class="custom-control-label" for="exampleRadios2">
+                      Default is set
+                    </label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="poll" id="exampleRadios3" value="3" checked>
+                    <label class="custom-control-label" for="exampleRadios3">
+                      In designs to be exposed
+                    </label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input class="custom-control-input" type="radio" name="poll" id="exampleRadios4" value="4">
+                    <label class="custom-control-label" for="exampleRadios4">
+                      Lorem Ibsium
+                    </label>
+                  </div>
+                  <div class="poll-btns">
+                    <button type="submit" class="btn btn-primary vote">vote</button>
+
+                    <button type="button" class="btn btn-primary show-results" id="showResult">
+                      View results
+                      <i class="far fa-arrow-alt-circle-right"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="default-card poll" style="display: none;" id="voteResult">
+                <h5>What service do you need and would like to be present in the internal portal of the authority?</h5>
+
+                <table style="width: 100%" cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="singlePollResult">
+                          <div class="poll-percent">Lorem Ipsum is the 92% model (7978)</div>
+                          <div class="resultbarbase"
+                            >
+                            <div style="float:left;  height:16px;width:92%;background-color:#0a6562;border:0 none">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="singlePollResult">
+                          <div class="poll-percent">Default setting 2% (260)</div>
+                          <div class="resultbarbase"
+                            >
+                            <div style="float:left;  height:16px;width:2%;background-color:#7ce8e4;border:0 none">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="singlePollResult">
+                          <div class="poll-percent">In designs to display 4% (432)</div>
+                          <div class="resultbarbase"
+                            >
+                            <div style="float:left;  height:16px;width:4%;background-color:#00afa9;border:0 none">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="singlePollResult">
+                          <div class="poll-percent">Lorem epsom 18% (432.62%))</div>
+                          <div class="resultbarbase"
+                            >
+                            <div style="float:left;  height:16px;width:18%;background-color:#26e44f;border:0 none">
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="poll-btns">
+                  <button type="submit" class="btn btn-primary vote" id="pollBack">back</button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="row mt-40">
+
+            <div class="col-12">
+              <div class="inner-title">
+                Related Links
+              </div>
+              <div class="row mb-70">
+                <div class="col-12 col-lg-6 col-xl-3">
+                  <div class="relative-card">
+                    <div class="img-box">
+                      <img src="../assets/images/rel-support-icon.svg" alt="">
+                    </div>
+                    <h4>Customer service system</h4>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                  <div class="relative-card">
+                    <div class="img-box">
+                      <img src="../assets/images/rel-mail-icon.svg" alt="">
+                    </div>
+
+                    <h4>Administrative correspondence system</h4>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                  <div class="relative-card">
+                    <div class="img-box">
+                      <img src="../assets/images/rel-tech-icon.svg" alt="">
+                    </div>
+
+                    <h4>Technical support system</h4>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-6 col-xl-3">
+                  <div class="relative-card">
+                    <div class="img-box">
+                      <img src="../assets/images/rel-technology-icon.svg" alt="">
+                    </div>
+
+                    <h4>Technical services guide</h4>
+                    <a href="javascript:;" class="stretched-link"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="copy float-right">
+        All rights reserved to the Saudi Standards, Metrology and Quality Organization © 2020
+      </div>
+      <div class="logos float-left">
+        <img src="../assets/images/saso-logo.svg" alt="">
+        <img src="../assets/images/vision-logo.svg" alt="">
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </footer>
+  <!-- jQuery -->
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- swiper -->
+  <script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+  <!-- select 2 -->
+  <script src="../node_modules/select2/dist/js/select2.full.min.js"></script>
+  <!-- inline -->
+  <!-- custom Js -->
+  <script src="../assets/js/custom.js"></script>
+
+</body>
+
+</html>
