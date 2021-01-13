@@ -13,6 +13,35 @@
   <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
   <!-- custom -->
   <link rel="stylesheet" href="../assets/css/styles-ltr.min.css">
+  <style>
+    .service-guide {
+    opacity: 0;
+    position: absolute;
+    bottom: 43px;
+    color: #02b1d6!important;
+}
+.service-guide:before{
+    content:'';
+    width:16px;
+    height:18px;
+    position:relative;
+    top:4px;
+    margin:0 5px;
+    display: inline-block;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='11.79' height='18.833' viewBox='0 0 11.79 18.833'%3e%3cpath id='book' d='M14.789,5.9v10.26c0,.517-.381.764-.842,1.15-.371.31-.842-.074-.842-.582V6.7a.574.574,0,0,0-.264-.53c-.2-.122-6.516-4.029-6.516-4.029A1.04,1.04,0,0,0,5.185,2.13a2.529,2.529,0,0,0-.948.886l6.888,4.443a.584.584,0,0,1,.3.511V18.677a.683.683,0,0,1-.311.58.559.559,0,0,1-.605-.027c-.181-.13-6.546-4.724-6.967-5.022a1.05,1.05,0,0,1-.444-.652L3,3.36a1.869,1.869,0,0,1,.243-1.023C3.83,1.262,5.878.04,6.915.673l7.578,4.515a.763.763,0,0,1,.3.714Z' transform='translate(-3 -0.5)' fill='%23abb2b4'/%3e%3c/svg%3e ");
+    background-size: contain;
+    background-repeat:no-repeat;
+}
+.service-box:hover .service-guide{
+    opacity: 1;
+}
+.service-box{
+    height:220px
+}
+.service-box:hover button {
+    margin-bottom: 30px;
+}
+  </style>
 </head>
 
 <body>
@@ -296,6 +325,7 @@
                       <img src="../assets/images/serv-plane-icon.svg" alt="" srcset="">
                       <h4>A vacation request</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -303,6 +333,7 @@
                       <img src="../assets/images/serv-desk-icon.svg" alt="" srcset="">
                       <h4>Request out of hours</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -310,6 +341,7 @@
                       <img src="../assets/images/serv-headphone-icon.svg" alt="" srcset="">
                       <h4>Request for secondment service</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -317,6 +349,7 @@
                       <img src="../assets/images/serv-calendar-icon.svg" alt="" srcset="">
                       <h4>Attendance and departure detection</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -324,6 +357,7 @@
                       <img src="../assets/images/serv-meeting-icon.svg" alt="" srcset="">
                       <h4>Hall reservation request</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -331,6 +365,7 @@
                       <img src="../assets/images/serv-tasks-icon.svg" alt="" srcset="">
                       <h4>Request for statement of out-of-hours hours</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -338,6 +373,7 @@
                       <img src="../assets/images/serv-car-icon.svg" alt="" srcset="">
                       <h4>Car maintenance service</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -345,6 +381,7 @@
                       <img src="../assets/images/alter-emp-serv-icon.svg" alt="" srcset="">
                       <h4>Substitute employee delegation service</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -352,6 +389,7 @@
                       <img src="../assets/images/loan-serv-icon.svg" alt="" srcset="">
                       <h4>Advance request service</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -359,6 +397,7 @@
                       <img src="../assets/images/tech-support-serv-icon.svg" alt="" srcset="">
                       <h4>Reporting service technical support</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -366,6 +405,7 @@
                       <img src="../assets/images/early-leave-serv-icon.svg" alt="" srcset="">
                       <h4>Ask permission</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -373,6 +413,7 @@
                       <img src="../assets/images/mission-doc-serv-icon.svg" alt="" srcset="">
                       <h4>Request a task performance document</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -380,6 +421,7 @@
                       <img src="../assets/images/Entry-Exit-serv-icon.svg" alt="" srcset="">
                       <h4>Request an entry and exit task</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -387,6 +429,7 @@
                       <img src="../assets/images/formal-mission-oneday-serv-icon.svg" alt="" srcset="">
                       <h4>An official task request one or more days</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -394,6 +437,7 @@
                       <img src="../assets/images/car-request-serv-icon.svg" alt="" srcset="">
                       <h4>Car order service</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -401,6 +445,7 @@
                       <img src="../assets/images/translation-serv-icon.svg" alt="" srcset="">
                       <h4>Request a translation</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -408,6 +453,7 @@
                       <img src="../assets/images/maintainance-serv-icon.svg" alt="" srcset="">
                       <h4>Maintenance service</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -415,6 +461,7 @@
                       <img src="../assets/images/emp-info-serv-icon.svg" alt="" srcset="">
                       <h4>Employee information</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -422,6 +469,7 @@
                       <img src="../assets/images/salary-serv-icon.svg" alt="" srcset="">
                       <h4>Salary path</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -429,6 +477,7 @@
                       <img src="../assets/images/job-promotion-serv-icon.svg" alt="" srcset="">
                       <h4>career</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -436,6 +485,7 @@
                       <img src="../assets/images/training-request-serv-icon.svg" alt="" srcset="">
                       <h4>Request for training needs</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -443,6 +493,7 @@
                       <img src="../assets/images/traininig-plan-serv-icon.svg" alt="" srcset="">
                       <h4>Request to prepare a training plan</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4 col-xl-3">
@@ -450,6 +501,7 @@
                       <img src="../assets/images/standard-traning-serv-icon.svg" alt="" srcset="">
                       <h4>Unified training request</h4>
                       <button type="button">Start the service</button>
+<a href="#" class="service-guide">Service User Guide</a>
                     </div>
                   </div>
                 </div>
